@@ -13,7 +13,7 @@ class DocumentController extends Controller
 
         $user = Auth::user();
        // dd($user);
-        $user_Id = $user->id;    
+        //$user_Id = $user->id;    
        //dd( $user->id);
         $validator = Validator::make($request->all(), [
             'name' => 'required',
@@ -35,7 +35,7 @@ class DocumentController extends Controller
         $dossier = new Document();
         $dossier->name = $request->name;
         $dossier->adress = $request->adress;
-        $dossier->user_id = $user_Id;
+        $dossier->user_id = 1;
         // $dossier->customer_id = 1;
         $dossier->save();
         
