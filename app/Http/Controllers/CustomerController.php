@@ -175,7 +175,7 @@ class CustomerController extends Controller
         $customer->photo_sous_sol2 = $pathphoto_sous_sol2;
         $customer->photo_sous_sol3 = $pathphoto_sous_sol3;
         $customer->photo_sous_sol4 = $pathphoto_sous_sol4;
-        $customer->user_id = $user_Id;
+        $customer->user_id = 1;
         // $dossier->customer_id = 1;
         $customer->save();
         
