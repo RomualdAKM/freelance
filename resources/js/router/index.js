@@ -11,6 +11,11 @@ import editDossier from '../pages/views/dossiers/edit.vue'
 //client
 import indexClient from '../pages/views/clients/index.vue'
 import addClient from '../pages/views/clients/add.vue'
+//formation
+import addFormation from '../pages/views/formations/add.vue'
+import indexFormation from '../pages/views/formations/index.vue'
+import showFormation from '../pages/views/formations/show.vue'
+import editFormation from '../pages/views/formations/edit.vue'
 
 import notFound from '../pages/notFound.vue'
 
@@ -95,6 +100,45 @@ const routes = [
         name: 'indexClient',
         path: '/clients',
         component: indexClient,
+        meta: {
+            requiresAuth: true
+        }
+        
+    },
+    //formation
+    {   
+        name: 'addFormation',
+        path: '/add-formation',
+        component: addFormation,
+        meta: {
+            requiresAuth: true
+        }
+        
+    },
+    {   
+        name: 'indexFormation',
+        path: '/formations',
+        component: indexFormation,
+        meta: {
+            requiresAuth: true
+        }
+        
+    },
+    {   
+        name: 'showFormation',
+        path: '/show-formation/:formationId',
+        component: showFormation,
+        props: true,
+        meta: {
+            requiresAuth: true
+        }
+        
+    },
+    {   
+        name: 'editFormation',
+        path: '/edit-formation/:formationId',
+        component: editFormation,
+        props: true,
         meta: {
             requiresAuth: true
         }

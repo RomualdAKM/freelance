@@ -6,6 +6,7 @@ import app from './pages/app.vue'
 import router from './router/index'
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/dist/sweetalert2.css'
+import CKEditor from '@ckeditor/ckeditor5-vue';
 
 window.Swal = Swal
 const toast = Swal.mixin({
@@ -20,4 +21,4 @@ window.toast = toast
 
 // const pinia = createPinia()
 // createApp(app).use(pinia).use(router).mount('#app')
-createApp(app).use(router).mount('#app')
+createApp(app).use(router).use(CKEditor).mount('#app')

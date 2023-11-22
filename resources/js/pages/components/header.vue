@@ -342,6 +342,27 @@ onMounted(() => {
                        
                     </ul>
                 </li>
+                <li>
+                    <a href="javascript:;" class="top-menu top-menu--active">
+                        <div class="top-menu__icon"> <i data-feather="box"></i> </div>
+                        <div class="top-menu__title"> Formations <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="index.html" class="top-menu">
+                                <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
+                                <router-link to="/formations" class="top-menu__title"> Liste</router-link>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="simple-menu-light-dashboard.html" class="top-menu">
+                                <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
+                                <router-link to="/add-formation" class="top-menu__title"> Ajouter </router-link>
+                            </a>
+                        </li>
+                       
+                    </ul>
+                </li>
                
                
 

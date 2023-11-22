@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DocumentController;
+use App\Http\Controllers\FormationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,5 +44,15 @@ Route::controller(CustomerController::class)->group(function(){
     Route::get('get_customers','get_customers');
     // Route::post('edit_document/{id}','edit_document');
     // Route::get('get_document/{id}','get_document');
+  
+});
+
+Route::controller(FormationController::class)->group(function(){
+
+    Route::post('create_formation','create_formation');
+    Route::get('get_formations','get_formations');
+    Route::post('edit_formation/{id}','edit_formation');
+    Route::get('get_formation/{id}','get_formation');
+    Route::get('delete_formation/{id}','delete_formation');
   
 });
