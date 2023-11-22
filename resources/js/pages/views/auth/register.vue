@@ -114,7 +114,7 @@ const changeCarte = (e) => {
                 <!-- BEGIN: Register Info -->
                 <div class="hidden xl:flex flex-col min-h-screen">
                     <a href="#" class="-intro-x flex items-center pt-5">
-                        <img alt="Midone Tailwind HTML Admin Template" class="w-6" src="/dist/images/logo.svg">
+                        <img alt="Midone Tailwind HTML Admin Template" class="w-6" src="/FRE2E_COMPANY.jpg">
                         <span class="text-white text-lg ml-3"> Mid<span class="font-medium">One</span> </span>
                     </a>
                     <div class="my-auto">

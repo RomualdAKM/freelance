@@ -25,7 +25,7 @@ onMounted(() => {
 
 <template>
 
-    <div class="mt-5">
+    <div class="mt-5" >
          <!-- BEGIN: Mobile Menu -->
          <div class="mobile-menu md:hidden">
             <div class="mobile-menu-bar">
@@ -44,7 +44,7 @@ onMounted(() => {
                 <li>
                     <a href="javascript:;" class="menu">
                         <div class="menu__icon"> <i data-feather="box"></i> </div>
-                        <div class="menu__title"> Clients <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                        <div class="menu__title"> CLIENT <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
                     </a>
                     <ul class="">
                         <li>
@@ -65,7 +65,7 @@ onMounted(() => {
                 <li>
                     <a href="javascript:;" class="menu">
                         <div class="menu__icon"> <i data-feather="box"></i> </div>
-                        <div class="menu__title"> Suivi Dossier <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                        <div class="menu__title"> SUIVI DOSSIER <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
                     </a>
                     <ul class="">
                         <li>
@@ -83,6 +83,27 @@ onMounted(() => {
                        
                     </ul>
                 </li>
+                <li>
+                    <a href="javascript:;" class="menu">
+                        <div class="menu__icon"> <i data-feather="box"></i> </div>
+                        <div class="menu__title"> FORMATION <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="index.html" class="menu">
+                                <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                                <router-link to="/formations" class="menu__title"> Liste </router-link>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="simple-menu-light-dashboard.html" class="menu">
+                                <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                                <router-link to="/add-formationr" class="menu__title"> Ajouter </router-link>
+                            </a>
+                        </li>
+                       
+                    </ul>
+                </li>
                
                
 
@@ -94,12 +115,12 @@ onMounted(() => {
             <div class="top-bar-boxed flex items-center">
                 <!-- BEGIN: Logo -->
                 <a href="#" class="-intro-x hidden md:flex">
-                    <img alt="Midone Tailwind HTML Admin Template" class="w-6" src="/dist/images/logo.svg">
-                    <span class="text-white text-lg ml-3"> XXXX <span class="font-medium">XXXXXXXX</span> </span>
+                    <img alt="Midone Tailwind HTML Admin Template" class="w-12 h-12" src="/FRE2E_COMPANY.jpg">
+                    <!-- <span class="text-white text-lg ml-3"> <span class="font-medium">FRE2E_COMPANY</span> </span> -->
                 </a>
                 <!-- END: Logo -->
                 <!-- BEGIN: Breadcrumb -->
-                <div class="-intro-x breadcrumb breadcrumb--light mr-auto"> <a href="#" class="">XXXXXX</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="#" class="breadcrumb--active">XXXXXXX</a> </div>
+                <div class="-intro-x breadcrumb breadcrumb--light mr-auto"> <a href="#" class="" style="color: rgb(10, 10, 10);">Bienvenue chez</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="#" class="breadcrumb--active" style="color: rgb(10, 10, 10);">FRE2E_COMPANY</a> </div>
                 <!-- END: Breadcrumb -->
                 <!-- BEGIN: Search -->
                 <div class="intro-x relative mr-3 sm:mr-6">
@@ -303,9 +324,9 @@ onMounted(() => {
                 <li>
                     <a href="javascript:;" class="top-menu top-menu--active">
                         <div class="top-menu__icon"> <i data-feather="box"></i> </div>
-                        <div class="top-menu__title"> Clients <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
+                        <div class="top-menu__title"> CLIENT <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
                     </a>
-                    <ul class="">
+                    <ul class="" >
                         <li>
                             <a href="index.html" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
@@ -324,7 +345,7 @@ onMounted(() => {
                 <li>
                     <a href="javascript:;" class="top-menu top-menu--active">
                         <div class="top-menu__icon"> <i data-feather="box"></i> </div>
-                        <div class="top-menu__title"> Suivi Dossier <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
+                        <div class="top-menu__title"> SUIVI DOSSIER <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
                     </a>
                     <ul class="">
                         <li>
@@ -345,7 +366,7 @@ onMounted(() => {
                 <li>
                     <a href="javascript:;" class="top-menu top-menu--active">
                         <div class="top-menu__icon"> <i data-feather="box"></i> </div>
-                        <div class="top-menu__title"> Formations <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
+                        <div class="top-menu__title"> FORMATION <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
                     </a>
                     <ul class="">
                         <li>
