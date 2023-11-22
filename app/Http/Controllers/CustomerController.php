@@ -154,7 +154,7 @@ class CustomerController extends Controller
         }
 
         $user = Auth::user();
-        $user_Id = $user->id;   
+       // $user_Id = $user->id;   
 
         $customer = new Customer();
         $customer->name = $request->name;

@@ -13,7 +13,7 @@ class DocumentController extends Controller
 
         $user = Auth::user();
        // dd($user);
-        $user_Id = $user->id;    
+        //$user_Id = $user->id;    
        //dd( $user->id);
         $validator = Validator::make($request->all(), [
             'name' => 'required',
