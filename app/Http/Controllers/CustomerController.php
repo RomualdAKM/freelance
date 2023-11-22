@@ -153,7 +153,7 @@ class CustomerController extends Controller
             $pathphoto_sous_sol4 = null;
         }
 
-        $user = Auth::user();
+        //$user = Auth::user();
        // $user_Id = $user->id;   
 
         $customer = new Customer();
