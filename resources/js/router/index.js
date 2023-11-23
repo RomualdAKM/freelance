@@ -16,6 +16,9 @@ import addFormation from '../pages/views/formations/add.vue'
 import indexFormation from '../pages/views/formations/index.vue'
 import showFormation from '../pages/views/formations/show.vue'
 import editFormation from '../pages/views/formations/edit.vue'
+//facture
+import addFacture from '../pages/views/factures/add.vue'
+import indexFacture from '../pages/views/factures/index.vue'
 
 import notFound from '../pages/notFound.vue'
 
@@ -139,6 +142,25 @@ const routes = [
         path: '/edit-formation/:formationId',
         component: editFormation,
         props: true,
+        meta: {
+            requiresAuth: true
+        }
+        
+    },
+    //facturations
+    {   
+        name: 'addFacture',
+        path: '/add-facture',
+        component: addFacture,
+        meta: {
+            requiresAuth: true
+        }
+        
+    },
+    {   
+        name: 'indexFacture',
+        path: '/factures',
+        component: indexFacture,
         meta: {
             requiresAuth: true
         }

@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BillController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\FormationController;
@@ -27,6 +28,7 @@ Route::controller(AuthController::class)->group(function(){
     Route::post('register','register');
     Route::post('login','login');
     Route::get('info_auth_user','info_auth_user');
+    Route::get('users','users');
     Route::post('change_password','change_password');
 
 });
@@ -56,4 +58,16 @@ Route::controller(FormationController::class)->group(function(){
     Route::get('get_formation/{id}','get_formation');
     Route::get('delete_formation/{id}','delete_formation');
   
+});
+
+Route::controller(BillController::class)->group(function(){
+    Route::get('get_bills','get_bills');
+    Route::get('delete_facture/{id}','delete_facture');
+    Route::post('create_bill','create_bill');
+    Route::post('download_facture','download_facture');
+    Route::post('send_facture','send_facture');
+
+    // Route::post('download_facture','download_facture');
+    // Route::post('send_facture','send_facture');
+
 });

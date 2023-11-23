@@ -175,4 +175,14 @@ class AuthController extends Controller
         return response()->json($user, 200);
 
     }
+
+    public function users(){
+
+        $users = User::where('role', 'user')->get();
+
+        return response()->json($users, 200);
+
+    }
+
+    
 }
