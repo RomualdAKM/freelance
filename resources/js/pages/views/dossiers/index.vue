@@ -14,8 +14,36 @@ const getDossiers = () => {
     })
 }
 
+const user = ref({})
+
+const getAuthUser = () => {
+    axios.get('/api/info_auth_user').then((response) => {
+        user.value = response.data
+        console.log('user',response.data)
+    })
+}
+const deleteDossier =  (dossierId) => {
+  Swal.fire({
+        title: "Are you sure ?",
+        text: "You can't go back",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it !",
+    }).then((result) => {
+        if (result.value) {
+            axios.get("/api/delete_dossier/" + dossierId).then(() => {
+                Swal.fire("Delete", "dossier delete successfully", "success");
+                //getCustomers(pagination.value.currentPage);
+                getDossiers()
+            });
+        }
+    });
+}
 onMounted(() => {
     getDossiers()
+    getAuthUser()
 })
 
 </script>
@@ -72,9 +100,9 @@ onMounted(() => {
 
                                            <div class="flex justify-center items-center">
 
-                                               <router-link :to="{name: 'editDossier',params:{dossierId:dossier.id}}" class="flex items-center mr-3" > <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Modifier </router-link>
+                                               <router-link :to="{name: 'editDossier',params:{dossierId:dossier.id}}" class="flex items-center mr-3" v-if="user.role == 'admin'"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Modifier </router-link>
 
-                                               <a class="flex items-center text-theme-6" href="javascript:;" data-toggle="modal" data-target="#delete-confirmation-modal"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Delete </a>
+                                               <button type="button" @click="deleteDossier(dossier.id)" class="flex items-center text-theme-6" href="javascript:;" data-toggle="modal" data-target="#delete-confirmation-modal"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Supprimer </button>
                                            </div>
 
                                        </td>
@@ -105,30 +133,16 @@ onMounted(() => {
                                    <a class="pagination__link" href="#"> <i class="w-4 h-4" data-feather="chevrons-right"></i> </a>
                                </li>
                            </ul>
-                           <select class="w-20 input box mt-3 sm:mt-0">
+                           <!-- <select class="w-20 input box mt-3 sm:mt-0">
                                <option>10</option>
                                <option>25</option>
                                <option>35</option>
                                <option>50</option>
-                           </select>
+                           </select> -->
                        </div>
                        <!-- END: Pagination -->
             </div>
-            <!-- BEGIN: Delete Confirmation Modal -->
-            <div class="modal" id="delete-confirmation-modal">
-                       <div class="modal__content">
-                           <div class="p-5 text-center">
-                               <i data-feather="x-circle" class="w-16 h-16 text-theme-6 mx-auto mt-3"></i> 
-                               <div class="text-3xl mt-5">Are you sure?</div>
-                               <div class="text-gray-600 mt-2">Do you really want to delete these records? This process cannot be undone.</div>
-                           </div>
-                           <div class="px-5 pb-8 text-center">
-                               <button type="button" data-dismiss="modal" class="button w-24 border text-gray-700 mr-1">Cancel</button>
-                               <button type="button" class="button w-24 bg-theme-6 text-white">Delete</button>
-                           </div>
-                       </div>
-            </div>
-            <!-- END: Delete Confirmation Modal -->
+            
         </div>
     </div>
 </template>

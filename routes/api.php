@@ -36,6 +36,7 @@ Route::controller(DocumentController::class)->group(function(){
     Route::post('edit_document/{id}','edit_document');
     Route::get('get_documents','get_documents');
     Route::get('get_document/{id}','get_document');
+    Route::get('delete_dossier/{id}','delete_dossier');
   
 });
 Route::controller(CustomerController::class)->group(function(){

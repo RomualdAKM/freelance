@@ -104,12 +104,12 @@ onMounted(() => {
                                    <a class="pagination__link" href="#"> <i class="w-4 h-4" data-feather="chevrons-right"></i> </a>
                                </li>
                            </ul>
-                           <select class="w-20 input box mt-3 sm:mt-0">
+                           <!-- <select class="w-20 input box mt-3 sm:mt-0">
                                <option>10</option>
                                <option>25</option>
                                <option>35</option>
                                <option>50</option>
-                           </select>
+                           </select> -->
                        </div>
                        <!-- END: Pagination -->
             </div>

@@ -103,4 +103,10 @@ class DocumentController extends Controller
         );
 
     }
+
+    public function delete_dossier($id){
+        
+        $dossier = Document::find($id);
+        $dossier->delete();
+    }
 }

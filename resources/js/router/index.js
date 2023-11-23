@@ -167,7 +167,7 @@ router.beforeEach((to,from) =>{
     }
 
     if(to.meta.requiresAuth == false && localStorage.getItem('token')){
-        return { name: 'index' }
+        return { name: 'login' }
     }
 })
 
