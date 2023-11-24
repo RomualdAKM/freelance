@@ -21891,7 +21891,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "top-menu__title"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" AJOUTER ")];
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" REMUNERATION ")];
     }),
     _: 1 /* STABLE */
   })])])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" END: Top Menu ")]);
