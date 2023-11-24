@@ -543,7 +543,7 @@ const saveCustomer = async () => {
                     </div> 
 
                            
-                    <button type="button" class="button bg-theme-1 text-white mt-5" @click="saveCustomer()">
+                    <button type="button" class="button bg-theme-1 text-white mt-5" @click="saveCustomer()" style="background-color: rgb(4, 141, 4);">
                         Valider
                     </button>
                 </form>

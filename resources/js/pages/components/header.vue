@@ -347,7 +347,7 @@ onMounted(() => {
                         <div class="top-menu__icon"> <i data-feather="box"></i> </div>
                         <div class="top-menu__title"> MES CLIENTS <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
                     </a>
-                    <ul class="" >
+                    <ul class="" style="background-color: rgb(4, 141, 4);">
                         <li>
                             <a href="index.html" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
@@ -390,7 +390,7 @@ onMounted(() => {
                         <div class="top-menu__icon"> <i data-feather="box"></i> </div>
                         <div class="top-menu__title"> MES DOSSIERS <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
                     </a>
-                    <ul class="">
+                    <ul class="" style="background-color: rgb(4, 141, 4);">
                         <li>
                             <a href="index.html" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
@@ -432,7 +432,7 @@ onMounted(() => {
                         <div class="top-menu__icon"> <i data-feather="box"></i> </div>
                         <div class="top-menu__title"> FORMATION <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
                     </a>
-                    <ul class="">
+                    <ul class="" style="background-color: rgb(4, 141, 4);">
                         <li>
                             <a href="index.html" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
@@ -453,7 +453,7 @@ onMounted(() => {
                         <div class="top-menu__icon"> <i data-feather="box"></i> </div>
                         <div class="top-menu__title"> FACTURATION <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
                     </a>
-                    <ul class="">
+                    <ul class="" style="background-color: rgb(4, 141, 4);">
                         <li>
                             <a href="index.html" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
@@ -474,7 +474,7 @@ onMounted(() => {
                         <div class="top-menu__icon"> <i data-feather="box"></i> </div>
                         <div class="top-menu__title"> ESPACE COMMERCIAUX <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
                     </a>
-                    <ul class="">
+                    <ul class="" style="background-color: rgb(4, 141, 4);">
                         <li>
                             <a href="index.html" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>

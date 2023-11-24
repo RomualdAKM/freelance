@@ -184,7 +184,7 @@ onMounted(() => {
                    </table>
                    <div class="flex items-center gap-2 justify-end mt-8">
                     <button class="btn btn-primary p-3 bg-green-500 text-white text-xs flex gap-2 items-center"  @click.prevent="saveFacture()"
-                     type="button">
+                     type="button" style="background-color: rgb(4, 141, 4);">
                      Enregistrer
                     </button>
                 </div>

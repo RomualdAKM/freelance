@@ -21578,7 +21578,10 @@ var _hoisted_45 = {
 };
 var _hoisted_46 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<a href=\"javascript:;\" class=\"top-menu top-menu--active\"><div class=\"top-menu__icon\"><i data-feather=\"box\"></i></div><div class=\"top-menu__title\"> MES CLIENTS <i data-feather=\"chevron-down\" class=\"top-menu__sub-icon\"></i></div></a>", 1);
 var _hoisted_47 = {
-  "class": ""
+  "class": "",
+  style: {
+    "background-color": "rgb(4, 141, 4)"
+  }
 };
 var _hoisted_48 = {
   href: "index.html",
@@ -21612,7 +21615,10 @@ var _hoisted_54 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 })], -1 /* HOISTED */);
 var _hoisted_55 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<a href=\"javascript:;\" class=\"top-menu top-menu--active\"><div class=\"top-menu__icon\"><i data-feather=\"box\"></i></div><div class=\"top-menu__title\"> MES DOSSIERS <i data-feather=\"chevron-down\" class=\"top-menu__sub-icon\"></i></div></a>", 1);
 var _hoisted_56 = {
-  "class": ""
+  "class": "",
+  style: {
+    "background-color": "rgb(4, 141, 4)"
+  }
 };
 var _hoisted_57 = {
   href: "index.html",
@@ -21646,7 +21652,10 @@ var _hoisted_63 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 })], -1 /* HOISTED */);
 var _hoisted_64 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<a href=\"javascript:;\" class=\"top-menu top-menu--active\"><div class=\"top-menu__icon\"><i data-feather=\"box\"></i></div><div class=\"top-menu__title\"> FORMATION <i data-feather=\"chevron-down\" class=\"top-menu__sub-icon\"></i></div></a>", 1);
 var _hoisted_65 = {
-  "class": ""
+  "class": "",
+  style: {
+    "background-color": "rgb(4, 141, 4)"
+  }
 };
 var _hoisted_66 = {
   href: "index.html",
@@ -21671,7 +21680,10 @@ var _hoisted_70 = {
 };
 var _hoisted_71 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<a href=\"javascript:;\" class=\"top-menu top-menu--active\"><div class=\"top-menu__icon\"><i data-feather=\"box\"></i></div><div class=\"top-menu__title\"> FACTURATION <i data-feather=\"chevron-down\" class=\"top-menu__sub-icon\"></i></div></a>", 1);
 var _hoisted_72 = {
-  "class": ""
+  "class": "",
+  style: {
+    "background-color": "rgb(4, 141, 4)"
+  }
 };
 var _hoisted_73 = {
   href: "index.html",
@@ -21696,7 +21708,10 @@ var _hoisted_77 = {
 };
 var _hoisted_78 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<a href=\"javascript:;\" class=\"top-menu top-menu--active\"><div class=\"top-menu__icon\"><i data-feather=\"box\"></i></div><div class=\"top-menu__title\"> ESPACE COMMERCIAUX <i data-feather=\"chevron-down\" class=\"top-menu__sub-icon\"></i></div></a>", 1);
 var _hoisted_79 = {
-  "class": ""
+  "class": "",
+  style: {
+    "background-color": "rgb(4, 141, 4)"
+  }
 };
 var _hoisted_80 = {
   href: "index.html",
@@ -22427,7 +22442,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "button bg-theme-1 text-white mt-5",
     onClick: _cache[4] || (_cache[4] = function ($event) {
       return $setup.saveCustomer();
-    })
+    }),
+    style: {
+      "background-color": "rgb(4, 141, 4)"
+    }
   }, " Valider ")])])])]);
 }
 
@@ -22509,7 +22527,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Header"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" END: Top Bar "), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: "/add-client",
-    "class": "button text-white bg-theme-1 shadow-md mr-2"
+    "class": "button text-white bg-theme-1 shadow-md mr-2",
+    style: {
+      "background-color": "rgb(4, 141, 4)"
+    }
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Nouveau Client")];
@@ -22611,7 +22632,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Header"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" END: Top Bar "), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: "/add-client",
-    "class": "button text-white bg-theme-1 shadow-md mr-2"
+    "class": "button text-white bg-theme-1 shadow-md mr-2",
+    style: {
+      "background-color": "rgb(4, 141, 4)"
+    }
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Nouveau Client")];
@@ -22679,7 +22703,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "button bg-theme-1 text-white mt-5",
     onClick: _cache[2] || (_cache[2] = function ($event) {
       return $setup.saveDossier();
-    })
+    }),
+    style: {
+      "background-color": "rgb(4, 141, 4)"
+    }
   }, " Valider ")])])])]);
 }
 
@@ -22789,7 +22816,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Header"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" END: Top Bar "), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: "/add-dossier",
-    "class": "button text-white bg-theme-1 shadow-md mr-2"
+    "class": "button text-white bg-theme-1 shadow-md mr-2",
+    style: {
+      "background-color": "rgb(4, 141, 4)"
+    }
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Nouveau Dossier")];
@@ -22899,7 +22929,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "button bg-theme-1 text-white mt-5",
     onClick: _cache[5] || (_cache[5] = function ($event) {
       return $setup.editDossier();
-    })
+    }),
+    style: {
+      "background-color": "rgb(4, 141, 4)"
+    }
   }, " Valider ")])])])]);
 }
 
@@ -23009,7 +23042,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Header"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" END: Top Bar "), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: "/add-dossier",
-    "class": "button text-white bg-theme-1 shadow-md mr-2"
+    "class": "button text-white bg-theme-1 shadow-md mr-2",
+    style: {
+      "background-color": "rgb(4, 141, 4)"
+    }
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Nouveau Dossier")];
@@ -23230,7 +23266,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[4] || (_cache[4] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function ($event) {
       return $setup.saveFacture();
     }, ["prevent"])),
-    type: "button"
+    type: "button",
+    style: {
+      "background-color": "rgb(4, 141, 4)"
+    }
   }, " Enregistrer ")])])])]);
 }
 
@@ -23366,7 +23405,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Header"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" END: Top Bar "), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: "/add-facture",
-    "class": "button text-white bg-theme-1 shadow-md mr-2"
+    "class": "button text-white bg-theme-1 shadow-md mr-2",
+    style: {
+      "background-color": "rgb(4, 141, 4)"
+    }
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Nouvelle Facture")];
@@ -23463,7 +23505,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "button bg-theme-1 text-white mt-5",
     onClick: _cache[2] || (_cache[2] = function ($event) {
       return $setup.saveFormation();
-    })
+    }),
+    style: {
+      "background-color": "rgb(4, 141, 4)"
+    }
   }, " Valider ")])])]);
 }
 
@@ -23523,7 +23568,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "button bg-theme-1 text-white mt-5",
     onClick: _cache[2] || (_cache[2] = function ($event) {
       return $setup.saveFormation();
-    })
+    }),
+    style: {
+      "background-color": "rgb(4, 141, 4)"
+    }
   }, " Modifier ")])])]);
 }
 
@@ -23606,7 +23654,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Header"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, $setup.user.role == 'admin' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: "/add-formation",
-    "class": "button text-white bg-theme-1 shadow-md mr-2"
+    "class": "button text-white bg-theme-1 shadow-md mr-2",
+    style: {
+      "background-color": "rgb(4, 141, 4)"
+    }
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Ajouter Nouvelle Formation")];

@@ -61,7 +61,7 @@ onMounted(() => {
                     Formations
                 </h2>
                 <div class="w-full sm:w-auto flex mt-4 sm:mt-0" v-if="user.role == 'admin'">
-                    <router-link to="/add-formation" class="button text-white bg-theme-1 shadow-md mr-2">Ajouter Nouvelle Formation</router-link>
+                    <router-link to="/add-formation" class="button text-white bg-theme-1 shadow-md mr-2" style="background-color: rgb(4, 141, 4);">Ajouter Nouvelle Formation</router-link>
                    
                 </div>
             </div>
