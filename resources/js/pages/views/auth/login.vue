@@ -36,12 +36,12 @@ const login = async () => {
         <div class="container sm:px-10">
                 <div class="block xl:grid grid-cols-2 gap-4">
                     <!-- BEGIN: Login Info -->
-                    <div class="hidden xl:flex flex-col min-h-screen">
+                    <div class="hidden xl:flex flex-col min-h-screen" >
                         <a href="#" class="-intro-x flex items-center pt-5">
                             <img alt="Midone Tailwind HTML Admin Template" class="w-6" src="/FRE2E_COMPANY.jpg">
                             <span class="text-white text-lg ml-3"> FRE2E COMPANY </span>
                         </a>
-                        <div class="my-auto">
+                        <div class="my-auto" >
                             <img alt="Midone Tailwind HTML Admin Template" class="-intro-x w-1/2 -mt-16" src="/dist/images/illustration.svg">
                             <div class="-intro-x text-white font-medium text-4xl leading-tight mt-10">
                                 Encore quelques clics 

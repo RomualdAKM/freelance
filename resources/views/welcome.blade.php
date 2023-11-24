@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         
     </head>
-    <body  style="background-color: rgb(245, 246, 245);">
+    <body  style="background-color: rgb(16, 238, 16);">
         <div id="app" >
 
             <script src="{{ asset('/dist/js/app.js')}}"></script>

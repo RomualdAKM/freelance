@@ -128,8 +128,6 @@ onMounted(() => {
                     </ul>
                 </li>
                
-               
-
             </ul>
         </div>
         <!-- END: Mobile Menu -->
@@ -353,19 +351,25 @@ onMounted(() => {
                         <li>
                             <a href="index.html" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
-                                <router-link to="/clients" class="top-menu__title"> Liste</router-link>
+                                <router-link to="/clients" class="top-menu__title"> LISTE</router-link>
                             </a>
                         </li>
                         <li>
                             <a href="simple-menu-light-dashboard.html" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
-                                <router-link to="/add-client" class="top-menu__title"> Ajouter </router-link>
+                                <router-link to="/add-client" class="top-menu__title"> AJOUTER </router-link>
+                            </a>
+                        </li>
+                        <li v-if="user.role == 'admin'">
+                            <a href="simple-menu-light-dashboard.html" class="top-menu">
+                                <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
+                                <router-link to="/all-clients" class="top-menu__title"> CLIENTS </router-link>
                             </a>
                         </li>
                        
                     </ul>
                 </li>
-                <li v-if="user.role == 'admin'">
+                <!-- <li v-if="user.role == 'admin'">
                     <a href="javascript:;" class="top-menu top-menu--active">
                         <div class="top-menu__icon"> <i data-feather="box"></i> </div>
                         <div class="top-menu__title"> CLIENTS <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
@@ -380,7 +384,7 @@ onMounted(() => {
                        
                        
                     </ul>
-                </li>
+                </li> -->
                 <li>
                     <a href="javascript:;" class="top-menu top-menu--active">
                         <div class="top-menu__icon"> <i data-feather="box"></i> </div>
@@ -390,19 +394,25 @@ onMounted(() => {
                         <li>
                             <a href="index.html" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
-                                <router-link to="/dossiers" class="top-menu__title"> Liste</router-link>
+                                <router-link to="/dossiers" class="top-menu__title"> LISTE</router-link>
                             </a>
                         </li>
                         <li>
                             <a href="simple-menu-light-dashboard.html" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
-                                <router-link to="/add-dossier" class="top-menu__title"> Ajouter </router-link>
+                                <router-link to="/add-dossier" class="top-menu__title"> AJOUTER </router-link>
+                            </a>
+                        </li>
+                        <li v-if="user.role == 'admin'">
+                            <a href="simple-menu-light-dashboard.html" class="top-menu">
+                                <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
+                                <router-link to="/all-dossiers" class="top-menu__title"> DOSSIERS </router-link>
                             </a>
                         </li>
                        
                     </ul>
                 </li>
-                <li v-if="user.role == 'admin'">
+                <!-- <li v-if="user.role == 'admin'">
                     <a href="javascript:;" class="top-menu top-menu--active">
                         <div class="top-menu__icon"> <i data-feather="box"></i> </div>
                         <div class="top-menu__title"> DOSSIERS <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
@@ -416,7 +426,7 @@ onMounted(() => {
                         </li>
                        
                     </ul>
-                </li>
+                </li> -->
                 <li>
                     <a href="javascript:;" class="top-menu top-menu--active">
                         <div class="top-menu__icon"> <i data-feather="box"></i> </div>
@@ -426,13 +436,13 @@ onMounted(() => {
                         <li>
                             <a href="index.html" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
-                                <router-link to="/formations" class="top-menu__title"> Liste</router-link>
+                                <router-link to="/formations" class="top-menu__title"> LISTE</router-link>
                             </a>
                         </li>
                         <li>
                             <a href="simple-menu-light-dashboard.html" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
-                                <router-link to="/add-formation" class="top-menu__title"> Ajouter </router-link>
+                                <router-link to="/add-formation" class="top-menu__title"> AJOUTER </router-link>
                             </a>
                         </li>
                        
@@ -447,13 +457,13 @@ onMounted(() => {
                         <li>
                             <a href="index.html" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
-                                <router-link to="/factures" class="top-menu__title"> Liste</router-link>
+                                <router-link to="/factures" class="top-menu__title"> LISTE</router-link>
                             </a>
                         </li>
                         <li>
                             <a href="simple-menu-light-dashboard.html" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
-                                <router-link to="/add-facture" class="top-menu__title"> Ajouter </router-link>
+                                <router-link to="/add-facture" class="top-menu__title"> AJOUTER </router-link>
                             </a>
                         </li>
                        
