@@ -49,12 +49,40 @@ class DocumentController extends Controller
         );
     }
 
-    public function get_documents(){
+    public function get_documents(Request $request){
 
-        $documents = Document::all();
+        $user = Auth::user();
+
+        $user_Id = $user->id;  
+
+        // $documents = Document::where('user_id', $user_Id)->get();
+
+        $query = Document::where('user_id', $user_Id);
+
+        if ($request->has('search')) {
+            $query->where('name', 'like', '%' . $request->input('search') . '%');
+        }
+
+        $documents = $query->get();
 
         return response()->json($documents, 200);
     }
+
+    
+    public function get_all_documents(Request $request){ 
+
+
+        if ($request->has('search')) {
+            $documents = Document::where('name', 'like', '%' . $request->input('search') . '%')->get();
+        }else{
+            $documents = Document::all();
+        }
+        
+        // $documents = Document::all();
+
+        return response()->json($documents, 200);
+    }
+
     public function get_document($id){
         
         $document = Document::find($id);

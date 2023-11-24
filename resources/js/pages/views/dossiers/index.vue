@@ -6,9 +6,10 @@ import { ref,onMounted } from 'vue'
 
 const dossiers = ref({})
 
+let search = ref('')
 
 const getDossiers = () => {
-    axios.get('/api/get_documents').then((response) => {
+    axios.get('/api/get_documents', { params: { search: search.value } }).then((response) => {
         dossiers.value = response.data
         console.log('dossiers',response.data)
     })
@@ -63,7 +64,7 @@ onMounted(() => {
                            <!-- <div class="hidden md:block mx-auto text-gray-600">Showing 1 to 10 of 150 entries</div> -->
                            <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
                                <div class="w-56 relative text-gray-700 dark:text-gray-300">
-                                   <input type="text" class="input w-56 box pr-10 placeholder-theme-13" placeholder="Search...">
+                                   <input type="text" v-model="search" @change="getDossiers()" class="input w-56 box pr-10 placeholder-theme-13" placeholder="Search...">
                                    <i class="w-4 h-4 absolute my-auto inset-y-0 mr-3 right-0" data-feather="search"></i> 
                                </div>
                            </div>
@@ -79,7 +80,7 @@ onMounted(() => {
                                        <th class="text-center whitespace-no-wrap">Montant Devis</th>
                                        <th class="text-center whitespace-no-wrap">Date Facturation</th>
                                        <th class="text-center whitespace-no-wrap">Statut</th>
-                                       <th class="text-center whitespace-no-wrap">ACTIONS</th>
+                                       <th class="text-center whitespace-no-wrap" v-if="user.role == 'admin'">ACTIONS</th>
 
                                    </tr>
                                </thead>
@@ -96,14 +97,15 @@ onMounted(() => {
                                        <td class="w-40">
                                            <div class="flex items-center justify-center text-theme-9"> <i data-feather="check-square" class="w-4 h-4 mr-2"></i> {{ dossier.status }} </div>
                                        </td>
-                                       <td class="table-report__action w-56">
+                                       <td class="table-report__action w-56" v-if="user.role == 'admin'">
 
                                            <div class="flex justify-center items-center">
 
-                                               <router-link :to="{name: 'editDossier',params:{dossierId:dossier.id}}" class="flex items-center mr-3" v-if="user.role == 'admin'"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Modifier </router-link>
+                                               <router-link :to="{name: 'editDossier',params:{dossierId:dossier.id}}" class="flex items-center mr-3"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Modifier </router-link>
 
                                                <button type="button" @click="deleteDossier(dossier.id)" class="flex items-center text-theme-6" href="javascript:;" data-toggle="modal" data-target="#delete-confirmation-modal"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Supprimer </button>
                                            </div>
+                                           
 
                                        </td>
                                    </tr>

@@ -5,6 +5,8 @@ import { ref,onMounted } from 'vue'
 
 const bills = ref({})
 
+
+
 const getBills = async () => {
   await  axios.get('/api/get_bills').then((response) => {
         bills.value = response.data

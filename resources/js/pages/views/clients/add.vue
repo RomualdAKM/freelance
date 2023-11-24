@@ -1,6 +1,6 @@
 <script setup>
 import Header from "../../components/header.vue";
-import { ref,reactive } from "vue";
+import { ref,reactive,onMounted } from "vue";
 import router from "./../../../router/index.js"
 
 let form = reactive({
@@ -295,7 +295,7 @@ const saveCustomer = async () => {
 
     if(response.data.success){
 
-                router.push("/dossiers")
+                router.push("/clients")
 
                 console.log('ok')
                   toast.fire({

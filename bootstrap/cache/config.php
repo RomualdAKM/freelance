@@ -1,7 +1,7 @@
 <?php return array (
   'app' => 
   array (
-    'name' => 'Laravel',
+    'name' => 'FRE2E_COMPANY',
     'env' => 'local',
     'debug' => true,
     'url' => 'free.egeolocal-vib.tech',
@@ -239,7 +239,7 @@
         'driver' => 'octane',
       ),
     ),
-    'prefix' => 'laravel_cache',
+    'prefix' => 'fre2e_company_cache',
   ),
   'cors' => 
   array (
@@ -338,7 +338,7 @@
       'options' => 
       array (
         'cluster' => 'redis',
-        'prefix' => 'laravel_database_',
+        'prefix' => 'fre2e_company_database_',
       ),
       'default' => 
       array (
@@ -587,7 +587,7 @@
     'from' => 
     array (
       'address' => 'avisclient@avisclientpro.com',
-      'name' => 'Laravel',
+      'name' => 'FRE2E_COMPANY',
     ),
     'markdown' => 
     array (
@@ -710,7 +710,7 @@
       0 => 2,
       1 => 100,
     ),
-    'cookie' => 'laravel_session',
+    'cookie' => 'fre2e_company_session',
     'path' => '/',
     'domain' => NULL,
     'secure' => NULL,

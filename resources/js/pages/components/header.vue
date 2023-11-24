@@ -2,7 +2,6 @@
 import { ref,onMounted } from 'vue'
 import router from "./../../router/index.js"
 
-
 const user = ref({})
 
 const getAuthUser = () => {
@@ -19,6 +18,7 @@ const logout = () => {
 
 onMounted(() => {
     getAuthUser()
+    
 })
 
 </script>
@@ -32,7 +32,9 @@ onMounted(() => {
                 <a href="#" class="flex mr-auto">
                     <img alt="Midone Tailwind HTML Admin Template" class="w-6" src="/dist/images/logo.svg">
                 </a>
-                <a href="javascript:;" id="mobile-menu-toggler"> <i data-feather="bar-chart-2" class="w-8 h-8 text-white transform -rotate-90"></i> </a>
+                <a href="javascript:;" id="mobile-menu-toggler"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-align-center"><line x1="18" y1="10" x2="6" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="18" y1="18" x2="6" y2="18"></line></svg>
+                </a>
             </div>
             <ul class="border-t border-theme-24 py-5 hidden">
                 <!-- <li>
@@ -345,7 +347,7 @@ onMounted(() => {
                 <li>
                     <a href="javascript:;" class="top-menu top-menu--active">
                         <div class="top-menu__icon"> <i data-feather="box"></i> </div>
-                        <div class="top-menu__title"> CLIENT <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
+                        <div class="top-menu__title"> MES CLIENTS <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
                     </a>
                     <ul class="" >
                         <li>
@@ -363,10 +365,26 @@ onMounted(() => {
                        
                     </ul>
                 </li>
+                <li v-if="user.role == 'admin'">
+                    <a href="javascript:;" class="top-menu top-menu--active">
+                        <div class="top-menu__icon"> <i data-feather="box"></i> </div>
+                        <div class="top-menu__title"> CLIENTS <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="index.html" class="top-menu">
+                                <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
+                                <router-link to="/all-clients" class="top-menu__title"> Liste</router-link>
+                            </a>
+                        </li>
+                       
+                       
+                    </ul>
+                </li>
                 <li>
                     <a href="javascript:;" class="top-menu top-menu--active">
                         <div class="top-menu__icon"> <i data-feather="box"></i> </div>
-                        <div class="top-menu__title"> SUIVI DOSSIER <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
+                        <div class="top-menu__title"> MES DOSSIERS <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
                     </a>
                     <ul class="">
                         <li>
@@ -379,6 +397,21 @@ onMounted(() => {
                             <a href="simple-menu-light-dashboard.html" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
                                 <router-link to="/add-dossier" class="top-menu__title"> Ajouter </router-link>
+                            </a>
+                        </li>
+                       
+                    </ul>
+                </li>
+                <li v-if="user.role == 'admin'">
+                    <a href="javascript:;" class="top-menu top-menu--active">
+                        <div class="top-menu__icon"> <i data-feather="box"></i> </div>
+                        <div class="top-menu__title"> DOSSIERS <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="index.html" class="top-menu">
+                                <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
+                                <router-link to="/all-dossiers" class="top-menu__title"> Liste</router-link>
                             </a>
                         </li>
                        
@@ -405,7 +438,7 @@ onMounted(() => {
                        
                     </ul>
                 </li>
-                <li>
+                <li v-if="user.role == 'admin'">
                     <a href="javascript:;" class="top-menu top-menu--active">
                         <div class="top-menu__icon"> <i data-feather="box"></i> </div>
                         <div class="top-menu__title"> FACTURATION <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>

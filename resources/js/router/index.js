@@ -6,10 +6,12 @@ import login from '../pages/views/auth/login.vue'
 import resetpassword from '../pages/views/setting/resetpassword.vue'
 //dossiers
 import indexDossier from '../pages/views/dossiers/index.vue'
+import allDossier from '../pages/views/dossiers/all.vue'
 import addDossier from '../pages/views/dossiers/add.vue'
 import editDossier from '../pages/views/dossiers/edit.vue'
 //client
 import indexClient from '../pages/views/clients/index.vue'
+import allClient from '../pages/views/clients/all.vue'
 import addClient from '../pages/views/clients/add.vue'
 //formation
 import addFormation from '../pages/views/formations/add.vue'
@@ -70,6 +72,15 @@ const routes = [
         
     },
     {   
+        name: 'allDossier',
+        path: '/all-dossiers',
+        component: allDossier,
+        meta: {
+            requiresAuth: true
+        }
+        
+    },
+    {   
         name: 'addDossier',
         path: '/add-dossier',
         component: addDossier,
@@ -96,6 +107,14 @@ const routes = [
         component: addClient,
         meta: {
             requiresAuth: true
+        },
+        beforeEnter: (to, from, next) => {
+            // Code à exécuter avant que la nouvelle route soit rendue
+            // Vous pouvez effectuer des opérations ici avant que la route soit rendue
+            console.log('Before entering index route');
+            
+            // Assurez-vous d'appeler next() pour permettre à la navigation de continuer
+            next();
         }
         
     },
@@ -105,9 +124,36 @@ const routes = [
         component: indexClient,
         meta: {
             requiresAuth: true
+        },
+        beforeEnter: (to, from, next) => {
+            // Code à exécuter avant que la nouvelle route soit rendue
+            // Vous pouvez effectuer des opérations ici avant que la route soit rendue
+            console.log('Before entering index route');
+            
+            // Assurez-vous d'appeler next() pour permettre à la navigation de continuer
+            next();
         }
         
     },
+
+    {   
+        name: 'allClient',
+        path: '/all-clients',
+        component: allClient,
+        meta: {
+            requiresAuth: true
+        },
+        beforeEnter: (to, from, next) => {
+            // Code à exécuter avant que la nouvelle route soit rendue
+            // Vous pouvez effectuer des opérations ici avant que la route soit rendue
+            console.log('Before entering index route');
+            
+            // Assurez-vous d'appeler next() pour permettre à la navigation de continuer
+            next();
+        }
+        
+    },
+
     //formation
     {   
         name: 'addFormation',
@@ -185,11 +231,11 @@ const router = createRouter({
 })
 router.beforeEach((to,from) =>{
     if(to.meta.requiresAuth && !localStorage.getItem('token')){
-        return { name: 'indexClient' }
+        return { name: 'login' }
     }
 
     if(to.meta.requiresAuth == false && localStorage.getItem('token')){
-        return { name: 'login' }
+        return { name: 'indexClient' }
     }
 })
 

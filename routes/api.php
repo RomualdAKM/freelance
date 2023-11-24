@@ -32,19 +32,23 @@ Route::controller(AuthController::class)->group(function(){
     Route::post('change_password','change_password');
 
 });
+
 Route::controller(DocumentController::class)->group(function(){
 
     Route::post('create_document','create_document');
     Route::post('edit_document/{id}','edit_document');
     Route::get('get_documents','get_documents');
+    Route::get('get_all_documents','get_all_documents');
     Route::get('get_document/{id}','get_document');
     Route::get('delete_dossier/{id}','delete_dossier');
   
 });
+
 Route::controller(CustomerController::class)->group(function(){
 
     Route::post('create_customer','create_customer');
     Route::get('get_customers','get_customers');
+    Route::get('get_all_customers','get_all_customers');
     // Route::post('edit_document/{id}','edit_document');
     // Route::get('get_document/{id}','get_document');
   

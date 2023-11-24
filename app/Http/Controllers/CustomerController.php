@@ -154,7 +154,8 @@ class CustomerController extends Controller
         }
 
         $user = Auth::user();
-       $user_Id = $user->id;   
+
+        $user_Id = $user->id;   
 
         $customer = new Customer();
         $customer->name = $request->name;
@@ -189,9 +190,34 @@ class CustomerController extends Controller
         );
 
     }
-    public function get_customers(){
+    public function get_customers(Request $request){
 
-        $customers = Customer::all();
+        $user = Auth::user();
+
+        $user_Id = $user->id;  
+
+        $query = Customer::where('user_id', $user_Id);
+
+        if ($request->has('search')) {
+            $query->where('name', 'like', '%' . $request->input('search') . '%');
+        }
+        
+        $customers = $query->get();
+
+        return response()->json($customers, 200);
+    }
+    public function get_all_customers(Request $request){
+
+
+        // $query  = Customer::all();
+
+        if ($request->has('search')) {
+            $customers = Customer::where('name', 'like', '%' . $request->input('search') . '%')->get();
+        }else{
+            $customers = Customer::all();
+        }
+
+        // $customers = $query;
 
         return response()->json($customers, 200);
     }

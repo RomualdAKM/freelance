@@ -5,8 +5,10 @@ import { ref,onMounted } from 'vue'
 
 const customers = ref({})
 
+let search = ref('')
+
 const getCustomers = () => {
-    axios.get('/api/get_customers').then((response) => {
+    axios.get('/api/get_customers', { params: { search: search.value } }).then((response) => {
         customers.value = response.data
         console.log('customers',response.data)
     })
@@ -33,7 +35,7 @@ onMounted(() => {
                            <!-- <div class="hidden md:block mx-auto text-gray-600">Showing 1 to 10 of 150 entries</div> -->
                            <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
                                <div class="w-56 relative text-gray-700 dark:text-gray-300">
-                                   <input type="text" class="input w-56 box pr-10 placeholder-theme-13" placeholder="Search...">
+                                   <input type="text" v-model="search" @change="getCustomers()" class="input w-56 box pr-10 placeholder-theme-13" placeholder="Search...">
                                    <i class="w-4 h-4 absolute my-auto inset-y-0 mr-3 right-0" data-feather="search"></i> 
                                </div>
                            </div>
