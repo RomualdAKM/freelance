@@ -469,6 +469,27 @@ onMounted(() => {
                        
                     </ul>
                 </li>
+                <li v-if="user.role == 'admin'">
+                    <a href="javascript:;" class="top-menu top-menu--active">
+                        <div class="top-menu__icon"> <i data-feather="box"></i> </div>
+                        <div class="top-menu__title"> ESPACE COMMERCIAUX <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="index.html" class="top-menu">
+                                <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
+                                <router-link to="#" class="top-menu__title"> CONTRAT</router-link>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="simple-menu-light-dashboard.html" class="top-menu">
+                                <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
+                                <router-link to="#" class="top-menu__title"> AJOUTER </router-link>
+                            </a>
+                        </li>
+                       
+                    </ul>
+                </li>
                
                
 

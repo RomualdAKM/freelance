@@ -1,6 +1,6 @@
 <template>
 
-    <main class="page-wrapper"  style="background-color: rgb(7, 239, 7);">
+    <main class="page-wrapper"  style="background-color: rgb(3, 163, 3);">
             
             <router-view></router-view>
             
