@@ -22418,7 +22418,7 @@ var _hoisted_1 = {
 };
 var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", {
   "class": "intro-y text-lg font-medium mt-10"
-}, " Liste des Clients ", -1 /* HOISTED */);
+}, " Liste de tous les Clients ", -1 /* HOISTED */);
 var _hoisted_3 = {
   "class": "grid grid-cols-12 gap-6 mt-5"
 };
@@ -22520,7 +22520,7 @@ var _hoisted_1 = {
 };
 var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", {
   "class": "intro-y text-lg font-medium mt-10"
-}, " Liste des Clients ", -1 /* HOISTED */);
+}, " Liste de mes Clients ", -1 /* HOISTED */);
 var _hoisted_3 = {
   "class": "grid grid-cols-12 gap-6 mt-5"
 };
@@ -22670,7 +22670,7 @@ var _hoisted_1 = {
 };
 var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", {
   "class": "intro-y text-lg font-medium mt-10"
-}, " Liste des Dossiers ", -1 /* HOISTED */);
+}, " Liste de tous les dossiers ", -1 /* HOISTED */);
 var _hoisted_3 = {
   "class": "grid grid-cols-12 gap-6 mt-5"
 };
@@ -22890,7 +22890,7 @@ var _hoisted_1 = {
 };
 var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", {
   "class": "intro-y text-lg font-medium mt-10"
-}, " Liste des Dossiers ", -1 /* HOISTED */);
+}, " Liste de mes Dossiers ", -1 /* HOISTED */);
 var _hoisted_3 = {
   "class": "grid grid-cols-12 gap-6 mt-5"
 };
