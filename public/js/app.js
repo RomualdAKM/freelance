@@ -21907,7 +21907,7 @@ var _hoisted_2 = {
 var _hoisted_3 = {
   "class": "block xl:grid grid-cols-2 gap-4"
 };
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"hidden xl:flex flex-col min-h-screen\"><a href=\"#\" class=\"-intro-x flex items-center pt-5\"><img alt=\"Midone Tailwind HTML Admin Template\" class=\"w-6\" src=\"/FRE2E_COMPANY.jpg\"><span class=\"text-white text-lg ml-3\"> Mid<span class=\"font-medium\">One</span></span></a><div class=\"my-auto\"><img alt=\"Midone Tailwind HTML Admin Template\" class=\"-intro-x w-1/2 -mt-16\" src=\"/dist/images/illustration.svg\"><div class=\"-intro-x text-white font-medium text-4xl leading-tight mt-10\"> Encore quelques clics <br> pour vous connecter à votre compte. </div></div></div>", 1);
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"hidden xl:flex flex-col min-h-screen\"><a href=\"#\" class=\"-intro-x flex items-center pt-5\"><img alt=\"Midone Tailwind HTML Admin Template\" class=\"w-6\" src=\"/FRE2E_COMPANY.jpg\"><span class=\"text-white text-lg ml-3\"> FRE2E COMPANY </span></a><div class=\"my-auto\"><img alt=\"Midone Tailwind HTML Admin Template\" class=\"-intro-x w-1/2 -mt-16\" src=\"/dist/images/illustration.svg\"><div class=\"-intro-x text-white font-medium text-4xl leading-tight mt-10\"> Encore quelques clics <br> pour vous connecter à votre compte. </div></div></div>", 1);
 var _hoisted_5 = {
   "class": "my-auto mx-auto xl:ml-20 bg-white xl:bg-transparent px-5 sm:px-8 py-8 xl:p-0 rounded-md shadow-md xl:shadow-none w-full sm:w-3/4 lg:w-2/4 xl:w-auto"
 };
@@ -21993,7 +21993,7 @@ var _hoisted_2 = {
 var _hoisted_3 = {
   "class": "block xl:grid grid-cols-2 gap-1"
 };
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"hidden xl:flex flex-col min-h-screen\"><a href=\"#\" class=\"-intro-x flex items-center pt-5\"><img alt=\"Midone Tailwind HTML Admin Template\" class=\"w-6\" src=\"/FRE2E_COMPANY.jpg\"><span class=\"text-white text-lg ml-3\"> Mid<span class=\"font-medium\">One</span></span></a><div class=\"my-auto\"><img alt=\"Midone Tailwind HTML Admin Template\" class=\"-intro-x w-1/2 -mt-16\" src=\"/dist/images/illustration.svg\"><div class=\"-intro-x text-white font-medium text-4xl leading-tight mt-10\"> Quelques clics <br> pour créer votre compte. </div></div></div>", 1);
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"hidden xl:flex flex-col min-h-screen\"><a href=\"#\" class=\"-intro-x flex items-center pt-5\"><img alt=\"Midone Tailwind HTML Admin Template\" class=\"w-6\" src=\"/FRE2E_COMPANY.jpg\"><span class=\"text-white text-lg ml-3\"> FRE2E COMPANY </span></a><div class=\"my-auto\"><img alt=\"Midone Tailwind HTML Admin Template\" class=\"-intro-x w-1/2 -mt-16\" src=\"/dist/images/illustration.svg\"><div class=\"-intro-x text-white font-medium text-4xl leading-tight mt-10\"> Quelques clics <br> pour créer votre compte. </div></div></div>", 1);
 var _hoisted_5 = {
   "class": "h-screen xl:h-auto flex py-5 xl:py-0 my-10 xl:my-0"
 };
