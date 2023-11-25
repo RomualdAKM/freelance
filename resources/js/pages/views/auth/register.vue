@@ -108,11 +108,11 @@ const changeCarte = (e) => {
 </script>
 
 <template>
-    <div class="login" style="background-color: #009926;">
-        <div class="container sm:px-10" style="background-color: #009926;">
-            <div class="block xl:grid grid-cols-2 gap-1" style="background-color: #009926;">
+    <div class="login" >
+        <div class="container sm:px-10" >
+            <div class="block xl:grid grid-cols-2 gap-1" >
                 <!-- BEGIN: Register Info -->
-                <!-- <div class="hidden xl:flex flex-col min-h-screen">
+                <div class="hidden xl:flex flex-col min-h-screen">
                     <a href="#" class="-intro-x flex items-center pt-5">
                         <img alt="Midone Tailwind HTML Admin Template" class="w-6" src="/FRE2E_COMPANY.jpg">
                         <span class="text-white text-lg ml-3"> FRE2E COMPANY </span>
@@ -125,11 +125,11 @@ const changeCarte = (e) => {
                             pour créer votre compte.
                         </div>
                     </div>
-                </div> -->
+                </div>
                 <!-- END: Register Info -->
                 <!-- BEGIN: Register Form -->
-                <div class="h-screen xl:h-auto flex py-5 xl:py-0 my-10 xl:my-0" style="background-color: #009926;">
-                    <div class="my-auto mx-auto xl:ml-20 bg-white xl:bg-transparent px-5 sm:px-8 py-8 xl:p-0 rounded-md shadow-md xl:shadow-none w-full sm:w-3/4 lg:w-2/4 xl:w-auto" style="background-color: #009926;">
+                <div class="h-screen xl:h-auto flex py-5 xl:py-0 my-10 xl:my-0" >
+                    <div class="my-auto mx-auto xl:ml-20 bg-white xl:bg-transparent px-5 sm:px-8 py-8 xl:p-0 rounded-md shadow-md xl:shadow-none w-full sm:w-3/4 lg:w-2/4 xl:w-auto" >
                         <h2 class="intro-x font-bold text-2xl xl:text-3xl text-center xl:text-left">
                             Créer un compte
                         </h2>
