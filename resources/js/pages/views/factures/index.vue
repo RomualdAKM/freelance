@@ -14,6 +14,7 @@ const getBills = async () => {
     })
 }
 
+
 const sendFacture = async (idFacture) => {
     await axios
         .post("/api/send_facture", {

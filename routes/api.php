@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BillController;
+use App\Http\Controllers\ParrainController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\FormationController;
@@ -74,4 +75,10 @@ Route::controller(BillController::class)->group(function(){
     // Route::post('download_facture','download_facture');
     // Route::post('send_facture','send_facture');
 
+});
+Route::controller(ParrainController::class)->group(function(){
+    
+    Route::get('get_affiliers','get_affiliers');
+    Route::get('get_user_affiliers/{id}','get_user_affiliers');
+   
 });

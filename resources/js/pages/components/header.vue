@@ -316,12 +316,16 @@ onMounted(() => {
                             <div class="p-4 border-b border-theme-40 dark:border-dark-3">
                                 <div class="font-medium">{{user.name}} {{user.first_name}}</div>
                                 <div class="text-xs text-theme-41 dark:text-gray-600">{{ user.email }}</div>
+                                
                             </div>
                             <div class="p-2">
                                 <!-- <a href="#" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"> <i data-feather="user" class="w-4 h-4 mr-2"></i> Profile </a>
                                 <a href="#" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"> <i data-feather="edit" class="w-4 h-4 mr-2"></i> Add Account </a> -->
                                 <router-link to="/reset-password" href="#" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"> <i data-feather="lock" class="w-4 h-4 mr-2"></i> Changer Mot de Passe </router-link>
                                 <!-- <a href="#" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"> <i data-feather="help-circle" class="w-4 h-4 mr-2"></i> Help </a> -->
+                            </div>
+                            <div class="p-2 border-t border-theme-40 dark:border-dark-3">
+                                <p class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"> <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> CODE PARRAINAGE : {{ user.code }} </p>
                             </div>
                             <div class="p-2 border-t border-theme-40 dark:border-dark-3">
                                 <a href="#" @click="logout" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"> <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Déconnexion </a>
@@ -342,7 +346,7 @@ onMounted(() => {
                         <div class="top-menu__title"> Dashboard </div>
                     </a>
                 </li> -->
-                <li>
+                <!-- <li>
                     <a href="javascript:;" class="top-menu top-menu--active">
                         <div class="top-menu__icon"> <i data-feather="box"></i> </div>
                         <div class="top-menu__title"> MES CLIENTS <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
@@ -368,7 +372,7 @@ onMounted(() => {
                         </li>
                        
                     </ul>
-                </li>
+                </li> -->
                 <!-- <li v-if="user.role == 'admin'">
                     <a href="javascript:;" class="top-menu top-menu--active">
                         <div class="top-menu__icon"> <i data-feather="box"></i> </div>
@@ -388,7 +392,7 @@ onMounted(() => {
                 <li>
                     <a href="javascript:;" class="top-menu top-menu--active">
                         <div class="top-menu__icon"> <i data-feather="box"></i> </div>
-                        <div class="top-menu__title"> MES DOSSIERS <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
+                        <div class="top-menu__title"> Suivi DOSSIER <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
                     </a>
                     <ul class="" style="background-color: rgb(4, 141, 4);">
                         <li>
@@ -412,21 +416,34 @@ onMounted(() => {
                        
                     </ul>
                 </li>
-                <!-- <li v-if="user.role == 'admin'">
-                    <a href="javascript:;" class="top-menu top-menu--active">
+                <li>
+                    <router-link to="/affiliation" class="top-menu top-menu--active">
                         <div class="top-menu__icon"> <i data-feather="box"></i> </div>
-                        <div class="top-menu__title"> DOSSIERS <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
-                    </a>
-                    <ul class="">
+                        <div class="top-menu__title"> AFFILIATION <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
+                    </router-link>
+                    <!-- <ul class="" style="background-color: rgb(4, 141, 4);">
                         <li>
                             <a href="index.html" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
-                                <router-link to="/all-dossiers" class="top-menu__title"> Liste</router-link>
+                                <router-link to="/dossiers" class="top-menu__title"> LISTE</router-link>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="simple-menu-light-dashboard.html" class="top-menu">
+                                <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
+                                <router-link to="/add-dossier" class="top-menu__title"> AJOUTER </router-link>
+                            </a>
+                        </li>
+                        <li v-if="user.role == 'admin'">
+                            <a href="simple-menu-light-dashboard.html" class="top-menu">
+                                <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
+                                <router-link to="/all-dossiers" class="top-menu__title"> DOSSIERS </router-link>
                             </a>
                         </li>
                        
-                    </ul>
-                </li> -->
+                    </ul> -->
+                </li>
+               
                 <li>
                     <a href="javascript:;" class="top-menu top-menu--active">
                         <div class="top-menu__icon"> <i data-feather="box"></i> </div>

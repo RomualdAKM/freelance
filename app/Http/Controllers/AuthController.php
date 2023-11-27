@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Parrain;
 use App\Mail\RegisterMail;
+use App\Models\CodeParrain;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -69,21 +71,33 @@ class AuthController extends Controller
         $input['password'] = bcrypt($input['password']);
 
        // $user = User::create($input);
-
+       
        $user = new User();
        $user->name = $input['name'];
        $user->first_name = $input['first_name'];
        $user->phone = $input['phone'];
        $user->email = $input['email'];
        $user->adress = $input['adress'];
-       $user->code = $input['code'];
+       $user->code = strtoupper($input['name'].$input['first_name']);
        $user->password = $input['password'];
        $user->picture = $pathPicture;
        $user->kbis = $pathKbis;
        $user->role = 'user';
        $user->carte_identite = $pathCarte;
-        
-        $user->save();
+       
+       $user->save();
+    
+       $parrain = new Parrain();
+       $parrain->code_parrain = $user->code;
+       $parrain->save();
+       
+        $parrain_user = User::where('code', $input['code'])->first();
+
+        //dd($parrain_user);
+
+        //$parrain_user->parrains()->attach($parrain);
+
+        $parrain->users()->attach($parrain_user);
 
         Mail::to($request->email)->send(new RegisterMail());
 

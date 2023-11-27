@@ -14,7 +14,7 @@ const login = async () => {
     await axios.post("api/login", form).then((response) => {
         if (response.data.success) {
             localStorage.setItem("token", response.data.data.token);
-            router.push("/clients");
+            router.push("/dossiers");
              toast.fire({
             icon: "success",
             title: "Connect  Successfully",

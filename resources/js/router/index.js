@@ -22,6 +22,11 @@ import editFormation from '../pages/views/formations/edit.vue'
 import addFacture from '../pages/views/factures/add.vue'
 import indexFacture from '../pages/views/factures/index.vue'
 
+//affiliation
+import indexAffiliation from '../pages/views/affiliation/index.vue'
+import showAffiliation from '../pages/views/affiliation/show.vue'
+
+
 import notFound from '../pages/notFound.vue'
 
 const routes = [
@@ -212,6 +217,28 @@ const routes = [
         }
         
     },
+    //affiliation
+    {   
+        name: 'indexAffiliation',
+        path: '/affiliation',
+        component: indexAffiliation,
+        meta: {
+            requiresAuth: true
+        }
+        
+    },
+
+    {   
+        name: 'showAffiliation',
+        path: '/show-affilier/:affilierId',
+        component: showAffiliation,
+        props: true,
+        meta: {
+            requiresAuth: true
+        }
+        
+    },
+
 
     {
         path: '/:pathMatch(.*)*',
