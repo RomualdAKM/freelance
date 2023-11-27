@@ -75,11 +75,11 @@ onMounted(() => {
                                <thead>
                                    <tr>
                                        
-                                       <th class="whitespace-no-wrap">Nom</th>
-                                       <th class="text-center whitespace-no-wrap">Adresse</th>
-                                       <th class="text-center whitespace-no-wrap">Montant Devis</th>
-                                       <th class="text-center whitespace-no-wrap">Date Facturation</th>
-                                       <th class="text-center whitespace-no-wrap">Statut</th>
+                                       <th class="whitespace-no-wrap">NOM</th>
+                                       <th class="text-center whitespace-no-wrap">PRENOM</th>
+                                       <th class="text-center whitespace-no-wrap">MONTANT DEVIS</th>
+                                       <th class="text-center whitespace-no-wrap">DATE FACTURATION</th>
+                                       <th class="text-center whitespace-no-wrap">SATUT</th>
                                        <th class="text-center whitespace-no-wrap" v-if="user.role == 'admin'">ACTIONS</th>
 
                                    </tr>

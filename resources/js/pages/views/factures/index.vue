@@ -101,10 +101,10 @@ onMounted(() => {
                                <thead>
                                    <tr>
                                        
-                                       <th class="whitespace-no-wrap">Numéro Facture</th>
-                                       <th class="text-center whitespace-no-wrap">Date d'échéance</th>
-                                       <th class="text-center whitespace-no-wrap">Date d'émission</th>
-                                       <th class="text-center whitespace-no-wrap">Agent</th>
+                                       <th class="whitespace-no-wrap">NUMERO</th>
+                                       <th class="text-center whitespace-no-wrap">DATE ECHEANCE</th>
+                                       <th class="text-center whitespace-no-wrap">DATE EMISSION</th>
+                                       <th class="text-center whitespace-no-wrap">AGENT</th>
                                        <th class="text-center whitespace-no-wrap">TotalHT</th>
                                        <th class="text-center whitespace-no-wrap">ACTIONS</th>
 

@@ -22013,7 +22013,7 @@ var _hoisted_47 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 var _hoisted_48 = {
   "class": "top-nav"
 };
-var _hoisted_49 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<a href=\"javascript:;\" class=\"top-menu top-menu--active\"><div class=\"top-menu__icon\"><i data-feather=\"box\"></i></div><div class=\"top-menu__title\"> Suivi DOSSIER <i data-feather=\"chevron-down\" class=\"top-menu__sub-icon\"></i></div></a>", 1);
+var _hoisted_49 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<a href=\"javascript:;\" class=\"top-menu top-menu--active\"><div class=\"top-menu__icon\"><i data-feather=\"box\"></i></div><div class=\"top-menu__title\"> SUIVI DOSSIER <i data-feather=\"chevron-down\" class=\"top-menu__sub-icon\"></i></div></a>", 1);
 var _hoisted_50 = {
   "class": "",
   style: {
@@ -23788,19 +23788,19 @@ var _hoisted_9 = {
 };
 var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   "class": "whitespace-no-wrap"
-}, "Nom", -1 /* HOISTED */);
+}, "NOM", -1 /* HOISTED */);
 var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   "class": "text-center whitespace-no-wrap"
-}, "Adresse", -1 /* HOISTED */);
+}, "PRENOM", -1 /* HOISTED */);
 var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   "class": "text-center whitespace-no-wrap"
-}, "Montant Devis", -1 /* HOISTED */);
+}, "MONTANT DEVIS", -1 /* HOISTED */);
 var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   "class": "text-center whitespace-no-wrap"
-}, "Date Facturation", -1 /* HOISTED */);
+}, "DATE FACTURATION", -1 /* HOISTED */);
 var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   "class": "text-center whitespace-no-wrap"
-}, "Statut", -1 /* HOISTED */);
+}, "SATUT", -1 /* HOISTED */);
 var _hoisted_15 = {
   key: 0,
   "class": "text-center whitespace-no-wrap"
@@ -24127,13 +24127,13 @@ var _hoisted_7 = {
 };
 var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   "class": "whitespace-no-wrap"
-}, "Numéro Facture"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+}, "NUMERO"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   "class": "text-center whitespace-no-wrap"
-}, "Date d'échéance"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+}, "DATE ECHEANCE"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   "class": "text-center whitespace-no-wrap"
-}, "Date d'émission"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+}, "DATE EMISSION"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   "class": "text-center whitespace-no-wrap"
-}, "Agent"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+}, "AGENT"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   "class": "text-center whitespace-no-wrap"
 }, "TotalHT"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   "class": "text-center whitespace-no-wrap"

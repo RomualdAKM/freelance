@@ -392,7 +392,7 @@ onMounted(() => {
                 <li>
                     <a href="javascript:;" class="top-menu top-menu--active">
                         <div class="top-menu__icon"> <i data-feather="box"></i> </div>
-                        <div class="top-menu__title"> Suivi DOSSIER <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
+                        <div class="top-menu__title"> SUIVI DOSSIER <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
                     </a>
                     <ul class="" style="background-color: rgb(4, 141, 4);">
                         <li>
