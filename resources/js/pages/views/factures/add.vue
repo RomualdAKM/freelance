@@ -182,11 +182,14 @@ onMounted(() => {
                       
                      </tbody>
                    </table>
-                   <div class="flex items-center gap-2 justify-end mt-8">
-                    <button class="btn btn-primary p-3 bg-green-500 text-white text-xs flex gap-2 items-center"  @click.prevent="saveFacture()"
+                   <div class="flex justify-between">
+                    <button class="btn btn-primary border-4 p-1 mt-2 bg-green-500 text-white text-xs flex gap-2 items-center"  @click.prevent="saveFacture()"
                      type="button" style="background-color: rgb(4, 141, 4);">
                      Enregistrer
                     </button>
+                    <router-link to="/factures" class="button bg-theme-1 text-white mt-5" style="background-color: rgb(234, 9, 9);">
+                            Annuler
+                   </router-link>
                 </div>
             </div>
         </div>

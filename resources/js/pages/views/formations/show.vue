@@ -26,9 +26,14 @@ onMounted( async () => {
     <div>
         <Header />
         <div class="content">
+
+
             <div class="intro-y news p-5 box mt-8">
+
+            <router-link to="/formations" class="button text-white bg-theme-1 shadow-md mr-2 mb-24" style="background-color: rgb(4, 141, 4);">RETOUR</router-link>
+
                 <!-- BEGIN: Blog Layout -->
-                <h2 class="intro-y font-medium text-xl sm:text-2xl">
+                <h2 class="intro-y font-medium text-xl sm:text-2xl mt-4">
                     {{ formation.title }}
                 </h2>
                 <div class="intro-y text-gray-700 dark:text-gray-600 mt-3 text-xs sm:text-sm"> {{ formation.created_at }} <span class="mx-1">•</span> </div>

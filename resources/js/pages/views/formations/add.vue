@@ -23,10 +23,16 @@
                         </label>
                     </div> 
               <ckeditor :editor="editor" v-model="form.description" :config="editorConfig"></ckeditor>
-                  
-              <button type="button" class="button bg-theme-1 text-white mt-5" @click="saveFormation()" style="background-color: rgb(4, 141, 4);">
-                        Valider
-              </button>
+              <div class="flex justify-between">
+                <button type="button" class="button bg-theme-1 text-white mt-5" @click="saveFormation()" style="background-color: rgb(4, 141, 4);">
+                          Valider
+                </button>
+
+                <router-link to="/formations" class="button bg-theme-1 text-white mt-5" style="background-color: rgb(234, 9, 9);">
+                            Annuler
+                </router-link>
+
+              </div>
             </div>
         </div>
   </div>

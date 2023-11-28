@@ -100,10 +100,15 @@ await axios.post("/api/edit_document/" + dossier.value.id, dossier.value)
                             <option value="Facturation">Facturation</option>
                         </select>
                     </div>
-                           
-                    <button type="button" class="button bg-theme-1 text-white mt-5" @click="editDossier()" style="background-color: rgb(4, 141, 4);">
-                        Valider
-                    </button>
+                        <div class="flex justify-between">
+
+                            <button type="button" class="button bg-theme-1 text-white mt-5" @click="editDossier()" style="background-color: rgb(4, 141, 4);">
+                                Valider
+                            </button>
+                            <router-link to="/contrats" class="button bg-theme-1 text-white mt-5" style="background-color: rgb(234, 9, 9);">
+                                    Annuler
+                          </router-link>
+                        </div>
                 </form>
 
             </div>

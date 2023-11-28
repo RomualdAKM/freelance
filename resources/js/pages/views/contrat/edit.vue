@@ -4,7 +4,7 @@
           <div class="content p-24" >
               <div class="intro-y box lg:mt-5 p-12">
                 <h1>Ajouter un contrat</h1>
-                <select  class="input border mt-2 mb-4 w-full" v-model="form.user_id">
+                <select  class="input border mt-2 mb-4 w-full" v-model="contrat.user_id">
 
                     <option value="" selected>Choisir un agent</option>
 
@@ -14,11 +14,11 @@
 
                 </select>
                       
-                <ckeditor :editor="editor" v-model="form.description" :config="editorConfig"></ckeditor>
+                <ckeditor :editor="editor" v-model="contrat.description" :config="editorConfig"></ckeditor>
                 <div class="flex justify-between">
 
-                  <button type="button" class="button bg-theme-1 text-white mt-5" @click="saveContrat()" style="background-color: rgb(4, 141, 4);">
-                            Valider
+                  <button type="button" class="button bg-theme-1 text-white mt-5" @click="editContrat()" style="background-color: rgb(4, 141, 4);">
+                            Modifier
                   </button>
                   <router-link to="/contrats" class="button bg-theme-1 text-white mt-5" style="background-color: rgb(234, 9, 9);">
                             Annuler
@@ -30,17 +30,29 @@
     </div>
   </template>
   
-  <script setup>
+<script setup>
   import Header from "../../components/header.vue";
   import { ref,reactive,onMounted } from "vue";
   import router from "./../../../router/index.js"
   import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-  
-  let form = reactive({
-      user_id:"",
-      description:"",
-     
-  })
+  import { useRoute } from 'vue-router'
+
+const route = useRoute()
+
+let contrat = ref({
+    user_id:"",
+    description:"",
+    
+})
+
+
+const contratId = ref(route.params.contratId)
+
+const getContrat = async () => {
+    let response = await axios.get(`/api/get_contrat/${contratId.value}`)
+    contrat.value = response.data
+    console.log('Contrat',response.data)
+}
 
   const users = ref({})
 
@@ -59,10 +71,10 @@ const getUsers = () => {
   });
  
   
-  const saveContrat = async () => {
+  const editContrat = async () => {
   
   
-  await axios.post('/api/create_contrat', form).then((response) => {
+  await axios.post("/api/edit_contrat/" + contrat.value.id, contrat.value).then((response) => {
   
   if(response.data.success){
   
@@ -71,7 +83,7 @@ const getUsers = () => {
               console.log('ok')
                 toast.fire({
                     icon: "success",
-                    title: "contrat enregistré avec success",
+                    title: "contrat modifier avec success",
                 });
   
               }
@@ -91,5 +103,6 @@ const getUsers = () => {
 
   onMounted(() => {
     getUsers()
+    getContrat()
 })
   </script>

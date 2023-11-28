@@ -86,8 +86,10 @@ Route::controller(ParrainController::class)->group(function(){
 Route::controller(ContratController::class)->group(function(){
     
     Route::post('create_contrat','create_contrat');
+    Route::post('edit_contrat/{id}','edit_contrat');
     Route::get('get_contrats','get_contrats');
     Route::get('get_all_contrats','get_all_contrats');
     Route::get('get_contrat/{id}','get_contrat');
+    Route::get('delete_contrat/{id}','delete_contrat');
    
 });

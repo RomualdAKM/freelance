@@ -28,6 +28,26 @@ const getAuthUser = () => {
     })
 }
 
+const deleteContrat =  (contratId) => {
+  Swal.fire({
+        title: "Are you sure ?",
+        text: "You can't go back",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it !",
+    }).then((result) => {
+        if (result.value) {
+            axios.get("/api/delete_contrat/" + contratId).then(() => {
+                Swal.fire("Delete", "contrat delete successfully", "success");
+                //getCustomers(pagination.value.currentPage);
+                getAllContrats()
+            });
+        }
+    });
+}
+
 const shortenedDescription = (description) => {
     const words = description.split(' ');
     const shortened = words.slice(0, 2).join(' ');
@@ -95,8 +115,8 @@ onMounted(() => {
 
                                                <router-link :to="{name: 'showContrat',params:{contratId:contrat.id}}" class="flex items-center mr-3" > <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Voir </router-link>
 
-                                               <!-- <a class="flex items-center text-theme-6" href="javascript:;" data-toggle="modal" data-target="#delete-confirmation-modal"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Delete </a>
-                                            -->
+                                               <!-- <button type="button" @click="deleteContrat(contrat.id)" class="flex items-center text-theme-6"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Supprimer </button> -->
+
                                             </div>
 
                                        </td>
@@ -111,11 +131,11 @@ onMounted(() => {
                                <thead>
                                    <tr>
                                        
-                                       <th class="whitespace-no-wrap">DATE</th>
-                                       <th class="text-center whitespace-no-wrap">DESCRIPTION</th>
+                                       <th class="whitespace-no-wrap" style="color: green;">DATE</th>
+                                       <th class="text-center whitespace-no-wrap" style="color: green;">DESCRIPTION</th>
                                        <!-- <th class="text-center whitespace-no-wrap">Email</th>
                                        <th class="text-center whitespace-no-wrap">Tel</th> -->
-                                       <th class="text-center whitespace-no-wrap">ACTIONS</th>
+                                       <th class="text-center whitespace-no-wrap" style="color: green;">ACTIONS</th>
 
                                    </tr>
                                </thead>
@@ -137,6 +157,10 @@ onMounted(() => {
 
                                                <router-link :to="{name: 'showContrat',params:{contratId:contrat.id}}" class="flex items-center mr-3" > <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Voir </router-link>
 
+                                               <router-link :to="{name: 'editContrat',params:{contratId:contrat.id}}" class="flex items-center mr-3" style="color: green;"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Modifier </router-link>
+
+                                               <button type="button" @click="deleteContrat(contrat.id)" class="flex items-center text-theme-6"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Supprimer </button>
+
                                                <!-- <a class="flex items-center text-theme-6" href="javascript:;" data-toggle="modal" data-target="#delete-confirmation-modal"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Delete </a>
                                             -->
                                             </div>
@@ -150,7 +174,7 @@ onMounted(() => {
                        <!-- END: Data List -->
                        <!-- BEGIN: Pagination -->
                        <div class="intro-y col-span-12 flex flex-wrap sm:flex-row sm:flex-no-wrap items-center">
-                           <ul class="pagination">
+                           <!-- <ul class="pagination">
                                <li>
                                    <a class="pagination__link" href="#"> <i class="w-4 h-4" data-feather="chevrons-left"></i> </a>
                                </li>
@@ -168,7 +192,7 @@ onMounted(() => {
                                <li>
                                    <a class="pagination__link" href="#"> <i class="w-4 h-4" data-feather="chevrons-right"></i> </a>
                                </li>
-                           </ul>
+                           </ul> -->
                            <!-- <select class="w-20 input box mt-3 sm:mt-0">
                                <option>10</option>
                                <option>25</option>

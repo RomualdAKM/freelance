@@ -95,5 +95,75 @@ class ContratController extends Controller
         return $contrat;
     }
 
+    public function delete_contrat($id){
+
+        $contrat = Contrat::find($id);
+
+        $contrat->delete();
+    }
+
+    public function edit_contrat(Request $request, $id){
+
+
+        $validator = Validator::make($request->all(), [
+           
+            'description' => 'required',
+            
+        ]);
+
+        if ($validator->fails()) {
+            $response = [
+                'success' => false,
+                'message' => $validator->errors()
+            ];
+            return response()->json(
+                $response,
+                200
+            );
+        }
+
+        $contrat = Contrat::find($id);
+
+        $contrat->description = $request->description;
+
+        $contrat->save();
+
+
+        if($request->user_id !== 'tout'){
+
+
+            $user = User::find($request->user_id);
+
+            $user->contrats()->attach($contrat);
+            
+       }else{
+
+         $users = User::where('role','user')->get();
+
+         
+         foreach($users as $userLoop){
+             
+           // dd($user);
+
+            $user = User::find($request->user_id);
+
+            $userLoop->contrats()->attach($contrat);
+        
+       }
+
+    }
+
+    $response = [
+        'success' => true,
+        'message' => "contrat save successfully"
+    ];
+    return response()->json(
+        $response,
+        200
+    );
+
+
+    }
+
 
 }

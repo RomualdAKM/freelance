@@ -102,6 +102,7 @@ onMounted(() => {
 
                                                <router-link :to="{name: 'editDossier',params:{dossierId:dossier.id}}" class="flex items-center mr-3"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Modifier </router-link>
 
+                                               
                                                <button type="button" @click="deleteDossier(dossier.id)" class="flex items-center text-theme-6" href="javascript:;" data-toggle="modal" data-target="#delete-confirmation-modal"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Supprimer </button>
                                            </div>
                                            

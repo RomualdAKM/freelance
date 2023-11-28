@@ -30,7 +30,7 @@ import showAffiliation from '../pages/views/affiliation/show.vue'
 import addContrat from '../pages/views/contrat/add.vue'
 import indexContrat from '../pages/views/contrat/index.vue'
 import showContrat from '../pages/views/contrat/show.vue'
-
+import editContrat from '../pages/views/contrat/edit.vue'
 
 import notFound from '../pages/notFound.vue'
 
@@ -256,6 +256,16 @@ const routes = [
         name: 'showContrat',
         path: '/show-contrat/:contratId',
         component: showContrat,
+        props: true,
+        meta: {
+            requiresAuth: true
+        }
+        
+    },
+    {   
+        name: 'editContrat',
+        path: '/edit-contrat/:contratId',
+        component: editContrat,
         props: true,
         meta: {
             requiresAuth: true

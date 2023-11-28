@@ -27,6 +27,8 @@ onMounted( async () => {
         <Header />
         <div class="content">
             <div class="intro-y news p-5 box mt-24">
+                <router-link to="/contrats" class="button text-white bg-theme-1 shadow-md mr-2" style="background-color: rgb(4, 141, 4);">RETOUR</router-link>
+
                 <!-- BEGIN: Blog Layout -->
                 <!-- <h2 class="intro-y font-medium text-xl sm:text-2xl">
                     {{ formation.title }}

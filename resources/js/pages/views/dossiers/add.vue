@@ -548,10 +548,16 @@ const saveDossier = async () => {
                         </label>
                     </div>
                     </div>
-                           
-                    <button type="button" class="button bg-theme-1 text-white mt-5" @click="saveDossier()" style="background-color: rgb(4, 141, 4);">
-                        Valider
-                    </button>
+                    <div class="flex justify-between">
+
+                        <button type="button" class="button bg-theme-1 text-white mt-5" @click="saveDossier()" style="background-color: rgb(4, 141, 4);">
+                            Valider
+                        </button>
+                        <router-link to="/dossiers" class="button bg-theme-1 text-white mt-5" style="background-color: rgb(234, 9, 9);">
+                            Annuler
+                        </router-link>
+
+                    </div>
                 </form>
 
             </div>
