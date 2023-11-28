@@ -31,6 +31,8 @@ Route::controller(AuthController::class)->group(function(){
     Route::post('login','login');
     Route::get('info_auth_user','info_auth_user');
     Route::get('users','users');
+    Route::get('active_user/{id}','active_user');
+    Route::get('desactive_user/{id}','desactive_user');
     Route::post('change_password','change_password');
 
 });

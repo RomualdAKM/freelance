@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Parrain;
+use App\Mail\PasswordMail;
 use App\Mail\RegisterMail;
 use App\Models\CodeParrain;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -26,8 +28,8 @@ class AuthController extends Controller
             'kbis' => 'required',
             'carte_identite' => 'required',
             'email' => 'required|email|unique:users',
-            'password' => 'required',
-            'c_password' => 'required|same:password'
+            // 'password' => 'required',
+            // 'c_password' => 'required|same:password'
         ]);
 
         if ($validator->fails()) {
@@ -68,7 +70,7 @@ class AuthController extends Controller
             $pathCarte = null;
         }
         $input = $request->all();
-        $input['password'] = bcrypt($input['password']);
+        // $input['password'] = bcrypt($input['password']);
 
        // $user = User::create($input);
        
@@ -79,9 +81,10 @@ class AuthController extends Controller
        $user->email = $input['email'];
        $user->adress = $input['adress'];
        $user->code = strtoupper($input['name'].$input['first_name']);
-       $user->password = $input['password'];
+    //    $user->password = $input['password'];
        $user->picture = $pathPicture;
        $user->kbis = $pathKbis;
+       $user->is_active = 0;
        $user->role = 'user';
        $user->carte_identite = $pathCarte;
        
@@ -117,7 +120,9 @@ class AuthController extends Controller
     {
         if (Auth::attempt([
             'email' => $request->email,
-            'password' => $request->password
+            'password' => $request->password,
+            'is_active' => '1',
+            
         ])) {
             // $user = Auth::user();
 
@@ -147,7 +152,8 @@ class AuthController extends Controller
 
         $validator = Validator::make($request->all(), [
             'password' => 'required',
-            'c_password' => 'required|same:password'
+            'c_password' => 'required|same:password',
+            
         ]);
 
         if ($validator->fails()) {
@@ -195,6 +201,42 @@ class AuthController extends Controller
         $users = User::where('role', 'user')->get();
 
         return response()->json($users, 200);
+
+    }
+
+    public function active_user($id){
+
+        $password = Str::random(8);
+
+        $newPassword = bcrypt($password);
+
+        $user = User::find($id);
+
+        $user->is_active = 1;
+
+        $user->password = $newPassword;
+
+        $user->save();
+
+        Mail::to($user->email)->send(new PasswordMail($user->email, $password));
+
+    }
+
+    public function desactive_user($id){
+
+        // $password = Str::random(8);
+
+        // $newPassword = bcrypt($password);
+
+        $user = User::find($id);
+
+        $user->is_active = 0;
+
+        //$user->password = $newPassword;
+
+        $user->save();
+
+       // Mail::to($user->email)->send(new PasswordMail($user->email, $password));
 
     }
 

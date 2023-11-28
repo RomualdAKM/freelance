@@ -32,6 +32,10 @@ import indexContrat from '../pages/views/contrat/index.vue'
 import showContrat from '../pages/views/contrat/show.vue'
 import editContrat from '../pages/views/contrat/edit.vue'
 
+//agents
+import indexAgent from '../pages/views/agents//index.vue'
+
+
 import notFound from '../pages/notFound.vue'
 
 const routes = [
@@ -284,6 +288,17 @@ const routes = [
         
     },
 
+    //Agents
+    {   
+        name: 'indexAgent',
+        path: '/agents',
+        component: indexAgent,
+        meta: {
+            requiresAuth: true
+        }
+        
+    },
+
 
     {
         path: '/:pathMatch(.*)*',
@@ -306,9 +321,9 @@ router.beforeEach((to,from) =>{
         return { name: 'login' }
     }
 
-    if(to.meta.requiresAuth == false && localStorage.getItem('token')){
-        return { name: 'indexClient' }
-    }
+    // if(to.meta.requiresAuth == false && localStorage.getItem('token')){
+    //     return { name: 'indexDossier' }
+    // }
 })
 
 

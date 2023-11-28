@@ -233,7 +233,7 @@ onMounted( async () => {
                 </div>
                 <!-- END: Search -->
                 <!-- BEGIN: Notifications -->
-                <div class="intro-x dropdown mr-4 sm:mr-6">
+                <!-- <div class="intro-x dropdown mr-4 sm:mr-6">
                     <div class="dropdown-toggle notification notification--light notification--bullet cursor-pointer"> <i data-feather="bell" class="notification__icon dark:text-gray-300"></i> </div>
                     <div class="notification-content pt-2 dropdown-box">
                         <div class="notification-content__box dropdown-box__content box dark:bg-dark-6">
@@ -305,7 +305,7 @@ onMounted( async () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- END: Notifications -->
                 <!-- BEGIN: Account Menu -->
                 <div class="intro-x dropdown w-8 h-8">
@@ -420,29 +420,9 @@ onMounted( async () => {
                 <li>
                     <router-link to="/affiliation" class="top-menu top-menu--active">
                         <div class="top-menu__icon"> <i data-feather="box" style="color:rgb(3, 87, 3);"></i> </div>
-                        <div class="top-menu__title" style="color:rgb(3, 87, 3);"> AFFILIATION <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
+                        <div class="top-menu__title" style="color:rgb(3, 87, 3);"> HIERARCHIE <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
                     </router-link>
-                    <!-- <ul class="" style="background-color: rgb(4, 141, 4);">
-                        <li>
-                            <a href="index.html" class="top-menu">
-                                <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
-                                <router-link to="/dossiers" class="top-menu__title"> LISTE</router-link>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="simple-menu-light-dashboard.html" class="top-menu">
-                                <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
-                                <router-link to="/add-dossier" class="top-menu__title"> AJOUTER </router-link>
-                            </a>
-                        </li>
-                        <li v-if="user.role == 'admin'">
-                            <a href="simple-menu-light-dashboard.html" class="top-menu">
-                                <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
-                                <router-link to="/all-dossiers" class="top-menu__title"> DOSSIERS </router-link>
-                            </a>
-                        </li>
-                       
-                    </ul> -->
+                   
                 </li>
                
                 <li>
@@ -457,7 +437,7 @@ onMounted( async () => {
                                 <router-link to="/formations" class="top-menu__title"> LISTE</router-link>
                             </a>
                         </li>
-                        <li>
+                        <li v-if="user.role == 'admin'">
                             <a href="simple-menu-light-dashboard.html" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
                                 <router-link to="/add-formation" class="top-menu__title"> AJOUTER </router-link>
@@ -487,7 +467,7 @@ onMounted( async () => {
                        
                     </ul>
                 </li>
-                <li v-if="user.role == 'admin'">
+                <li>
                     <a href="javascript:;" class="top-menu top-menu--active">
                         <div class="top-menu__icon"> <i data-feather="box" style="color:rgb(3, 87, 3);"></i> </div>
                         <div class="top-menu__title" style="color:rgb(3, 87, 3);"> ESPACE COMMERCIAUX <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
@@ -507,6 +487,14 @@ onMounted( async () => {
                         </li>
                        
                     </ul>
+                </li>
+
+                <li v-if="user.role == 'admin'">
+                    <router-link to="/agents" class="top-menu top-menu--active">
+                        <div class="top-menu__icon"> <i data-feather="box" style="color:rgb(3, 87, 3);"></i> </div>
+                        <div class="top-menu__title" style="color:rgb(3, 87, 3);"> AGENTS <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
+                    </router-link>
+                   
                 </li>
                
                

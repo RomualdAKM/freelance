@@ -13,8 +13,8 @@ let form = reactive({
     picture: "",
     kbis: "",
     carte_identite: "",
-    password: "",
-    c_password: "",
+    // password: "",
+    // c_password: "",
 });
 
 const register = async () => {
@@ -28,8 +28,8 @@ const register = async () => {
     formData.append("email", form.email);
     formData.append("adress", form.adress);
     formData.append("code", form.code);
-    formData.append("password", form.password);
-    formData.append("c_password", form.c_password);
+    // formData.append("password", form.password);
+    // formData.append("c_password", form.c_password);
 
     if (form.picture) {
         formData.append("picture", form.picture);
@@ -43,11 +43,12 @@ const register = async () => {
     await axios.post("/api/register", formData).then((response) => {
         if (response.data.success) {
             localStorage.setItem("token", response.data.data.token);
-             router.push("/clients");
+            router.push("/login");
             toast.fire({
             icon: "success",
-            title: "Compte créé avec succé",
+            title: "consultez votre email",
         });
+
         } else {
           console.log('error',response.data.message)
            toast.fire({
@@ -57,7 +58,6 @@ const register = async () => {
         }
     });
 };
-
 
 const changePhoto = (e) => {
     const file = e.target.files[0];
@@ -202,12 +202,7 @@ const changeCarte = (e) => {
                                     </div>
                                     <input id="dropzone-carte" type="file" class="hidden" @change="changeCarte"/>
                                 </label>
-                            </div> 
-                                
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-4">
-                                    <input type="password" v-model="form.password" class="intro-x  input input--lg border border-gray-300 block mt-4" placeholder="Password ">
-                                    <input type="password" v-model="form.c_password" class="intro-x  input input--lg border border-gray-300 block mt-4" placeholder="Password Confirmation">
-                                </div>
+                            </div>
                                
                             </div>
 
@@ -216,11 +211,7 @@ const changeCarte = (e) => {
                                 <router-link to="/login" class="button button--lg w-full xl:w-32 text-gray-700 border border-gray-300 dark:border-dark-5 dark:text-gray-300 mt-3 xl:mt-0 align-top">Connexion</router-link>
                             </div>
                         </form>
-                        <!-- <div class="intro-x flex items-center text-gray-700 dark:text-gray-600 mt-4 text-xs sm:text-sm">
-                            <input type="checkbox" class="input border mr-2" id="remember-me">
-                            <label class="cursor-pointer select-none" for="remember-me">I agree to the Envato</label>
-                            <a class="text-theme-1 dark:text-theme-10 ml-1" href="#">Privacy Policy</a>. 
-                        </div> -->
+                       
                     </div>
                 </div>
                 <!-- END: Register Form -->

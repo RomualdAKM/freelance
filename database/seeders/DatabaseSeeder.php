@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
             'phone' => '97979797',
             'adress' => 'Super Admin',
             'code' => 'SUPERADMIN',
+            'is_active' => '1',
             'email' => 'test@example.com',
             'password' => Hash::make('password'),
             'role' => 'admin',
