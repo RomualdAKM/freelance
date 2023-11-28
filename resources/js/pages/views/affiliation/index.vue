@@ -51,7 +51,7 @@ onMounted(() => {
                                        <th class="text-center whitespace-no-wrap">EMAIL</th>
                                        <th class="text-center whitespace-no-wrap">TEL</th>
                                        <th class="text-center whitespace-no-wrap">NIVEAU</th>
-                                       <th class="text-center whitespace-no-wrap">ACTIONS</th>
+                                       <th class="text-center whitespace-no-wrap">AFFILLIERS</th>
 
                                    </tr>
                                </thead>

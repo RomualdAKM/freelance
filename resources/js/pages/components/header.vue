@@ -495,7 +495,7 @@ onMounted(() => {
                         <li>
                             <a href="index.html" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
-                                <router-link to="#" class="top-menu__title"> CONTRAT</router-link>
+                                <router-link to="/contrats" class="top-menu__title"> CONTRAT</router-link>
                             </a>
                         </li>
                         <li>

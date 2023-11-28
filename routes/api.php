@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BillController;
+use App\Http\Controllers\ContratController;
 use App\Http\Controllers\ParrainController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DocumentController;
@@ -80,5 +81,13 @@ Route::controller(ParrainController::class)->group(function(){
     
     Route::get('get_affiliers','get_affiliers');
     Route::get('get_user_affiliers/{id}','get_user_affiliers');
+   
+});
+Route::controller(ContratController::class)->group(function(){
+    
+    Route::post('create_contrat','create_contrat');
+    Route::get('get_contrats','get_contrats');
+    Route::get('get_all_contrats','get_all_contrats');
+    Route::get('get_contrat/{id}','get_contrat');
    
 });

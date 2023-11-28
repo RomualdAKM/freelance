@@ -26,6 +26,11 @@ import indexFacture from '../pages/views/factures/index.vue'
 import indexAffiliation from '../pages/views/affiliation/index.vue'
 import showAffiliation from '../pages/views/affiliation/show.vue'
 
+//contrat
+import addContrat from '../pages/views/contrat/add.vue'
+import indexContrat from '../pages/views/contrat/index.vue'
+import showContrat from '../pages/views/contrat/show.vue'
+
 
 import notFound from '../pages/notFound.vue'
 
@@ -222,6 +227,36 @@ const routes = [
         name: 'indexAffiliation',
         path: '/affiliation',
         component: indexAffiliation,
+        meta: {
+            requiresAuth: true
+        }
+        
+    },
+    //contrat
+    {   
+        name: 'addContrat',
+        path: '/add-contrat',
+        component: addContrat,
+        meta: {
+            requiresAuth: true
+        }
+    
+    },
+    {   
+        name: 'indexContrat',
+        path: '/contrats',
+        component: indexContrat,
+        meta: {
+            requiresAuth: true
+        }
+        
+    },
+    
+    {   
+        name: 'showContrat',
+        path: '/show-contrat/:contratId',
+        component: showContrat,
+        props: true,
         meta: {
             requiresAuth: true
         }

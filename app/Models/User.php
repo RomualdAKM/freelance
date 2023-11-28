@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Contrat;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -53,5 +54,9 @@ class User extends Authenticatable
     public function parrains(): BelongsToMany
     {
         return $this->belongsToMany(Parrain::class);
+    }
+    public function contrats(): BelongsToMany
+    {
+        return $this->belongsToMany(Contrat::class);
     }
 }
