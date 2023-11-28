@@ -14,15 +14,17 @@ class PasswordMail extends Mailable
     use Queueable, SerializesModels;
     public $email;
     public $password;
+    public $code;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($email,$password)
+    public function __construct($email,$password,$code)
     {
         $this->email = $email;
         $this->password = $password;
+        $this->code = $code;
     }
 
     /**
@@ -33,7 +35,7 @@ class PasswordMail extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Password Mail',
+            subject: 'Compte Activé',
         );
     }
 

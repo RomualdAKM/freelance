@@ -110,8 +110,8 @@ onMounted(() => {
                                            <div class="flex justify-center items-center">
 
                                                <!-- <router-link :to="{name: 'editDossier',params:{dossierId:dossier.id}}" class="flex items-center mr-3" > <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Modifier </router-link> -->
-                                               <button type="button" @click="activeAgent(user.id)" class="flex items-center text-theme-1" v-if="user.is_active == 0"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Activé </button>
-                                               <button type="button" @click="desactiveAgent(user.id)" class="flex items-center text-theme-6" v-if="user.is_active == 1"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Désactivé </button>
+                                               <button type="button" @click="activeAgent(user.id)" class="flex items-center text-theme-1" v-if="user.is_active == 0">  Activé </button>
+                                               <button type="button" @click="desactiveAgent(user.id)" class="flex items-center text-theme-6" v-if="user.is_active == 1">  Désactivé </button>
 
                                                <!-- <a class="flex items-center text-theme-6" href="javascript:;" data-toggle="modal" data-target="#delete-confirmation-modal"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Delete </a>
                                             -->

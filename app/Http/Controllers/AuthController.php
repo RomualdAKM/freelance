@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Parrain;
 use App\Mail\PasswordMail;
@@ -73,6 +74,12 @@ class AuthController extends Controller
         // $input['password'] = bcrypt($input['password']);
 
        // $user = User::create($input);
+       $date = Carbon::now()->format('d/m/y');
+
+      // $mycode = strtoupper($input['name'].$input['first_name']).$date.'/1';
+       $mycode = strtoupper(substr($input['name'], 0, 1) . substr($input['first_name'], 0, 1)).$date.'1';
+
+       //dd($mycode);
        
        $user = new User();
        $user->name = $input['name'];
@@ -80,8 +87,8 @@ class AuthController extends Controller
        $user->phone = $input['phone'];
        $user->email = $input['email'];
        $user->adress = $input['adress'];
-       $user->code = strtoupper($input['name'].$input['first_name']);
-    //    $user->password = $input['password'];
+       $user->code = $mycode;
+       //$user->password = $input['password'];
        $user->picture = $pathPicture;
        $user->kbis = $pathKbis;
        $user->is_active = 0;
@@ -218,7 +225,7 @@ class AuthController extends Controller
 
         $user->save();
 
-        Mail::to($user->email)->send(new PasswordMail($user->email, $password));
+        Mail::to($user->email)->send(new PasswordMail($user->email, $password, $user->code));
 
     }
 

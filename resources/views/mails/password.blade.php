@@ -9,7 +9,9 @@
 <body>
     <h1>Votre compte a été activé</h1>
     <p>Voici vos identifiants pour vous connecter :</p>
-    <p>Email: <strong>{{ $email }}</strong></p>
-    <p>Mot de passe: <strong>{{ $password }}</strong></p>
+    <p>Email : <strong>{{ $email }}</strong></p>
+    <p>Mot de passe : <strong>{{ $password }}</strong> (vous avez la possibilité de modifier votre mot de passe une fois connecté)</p>
+    <p>Votre Code de Parrainage : <strong>{{ $code }}</strong></p>
+
 </body>
 </html>

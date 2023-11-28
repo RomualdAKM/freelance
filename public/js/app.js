@@ -23213,19 +23213,11 @@ var _hoisted_13 = {
   "class": "flex justify-center items-center"
 };
 var _hoisted_14 = ["onClick"];
-var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-  "data-feather": "trash-2",
-  "class": "w-4 h-4 mr-1"
-}, null, -1 /* HOISTED */);
-var _hoisted_16 = ["onClick"];
-var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-  "data-feather": "trash-2",
-  "class": "w-4 h-4 mr-1"
-}, null, -1 /* HOISTED */);
-var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_15 = ["onClick"];
+var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "intro-y col-span-12 flex flex-wrap sm:flex-row sm:flex-no-wrap items-center"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <ul class=\"pagination\">\r\n                               <li>\r\n                                   <a class=\"pagination__link\" href=\"#\"> <i class=\"w-4 h-4\" data-feather=\"chevrons-left\"></i> </a>\r\n                               </li>\r\n                               <li>\r\n                                   <a class=\"pagination__link\" href=\"#\"> <i class=\"w-4 h-4\" data-feather=\"chevron-left\"></i> </a>\r\n                               </li>\r\n                               <li> <a class=\"pagination__link\" href=\"#\">...</a> </li>\r\n                               <li> <a class=\"pagination__link\" href=\"#\">1</a> </li>\r\n                               <li> <a class=\"pagination__link pagination__link--active\" href=\"#\">2</a> </li>\r\n                               <li> <a class=\"pagination__link\" href=\"#\">3</a> </li>\r\n                               <li> <a class=\"pagination__link\" href=\"#\">...</a> </li>\r\n                               <li>\r\n                                   <a class=\"pagination__link\" href=\"#\"> <i class=\"w-4 h-4\" data-feather=\"chevron-right\"></i> </a>\r\n                               </li>\r\n                               <li>\r\n                                   <a class=\"pagination__link\" href=\"#\"> <i class=\"w-4 h-4\" data-feather=\"chevrons-right\"></i> </a>\r\n                               </li>\r\n                           </ul> "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <select class=\"w-20 input box mt-3 sm:mt-0\">\r\n                               <option>10</option>\r\n                               <option>25</option>\r\n                               <option>35</option>\r\n                               <option>50</option>\r\n                           </select> ")], -1 /* HOISTED */);
-var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"modal\" id=\"delete-confirmation-modal\"><div class=\"modal__content\"><div class=\"p-5 text-center\"><i data-feather=\"x-circle\" class=\"w-16 h-16 text-theme-6 mx-auto mt-3\"></i><div class=\"text-3xl mt-5\">Are you sure?</div><div class=\"text-gray-600 mt-2\">Do you really want to delete these records? This process cannot be undone.</div></div><div class=\"px-5 pb-8 text-center\"><button type=\"button\" data-dismiss=\"modal\" class=\"button w-24 border text-gray-700 mr-1\">Cancel</button><button type=\"button\" class=\"button w-24 bg-theme-6 text-white\">Delete</button></div></div></div>", 1);
+var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"modal\" id=\"delete-confirmation-modal\"><div class=\"modal__content\"><div class=\"p-5 text-center\"><i data-feather=\"x-circle\" class=\"w-16 h-16 text-theme-6 mx-auto mt-3\"></i><div class=\"text-3xl mt-5\">Are you sure?</div><div class=\"text-gray-600 mt-2\">Do you really want to delete these records? This process cannot be undone.</div></div><div class=\"px-5 pb-8 text-center\"><button type=\"button\" data-dismiss=\"modal\" class=\"button w-24 border text-gray-700 mr-1\">Cancel</button><button type=\"button\" class=\"button w-24 bg-theme-6 text-white\">Delete</button></div></div></div>", 1);
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Header"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" END: Top Bar "), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" BEGIN: Data List "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.users, function (user) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", {
@@ -23238,15 +23230,15 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         return $setup.activeAgent(user.id);
       },
       "class": "flex items-center text-theme-1"
-    }, [_hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Activé ")], 8 /* PROPS */, _hoisted_14)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), user.is_active == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", {
+    }, " Activé ", 8 /* PROPS */, _hoisted_14)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), user.is_active == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", {
       key: 1,
       type: "button",
       onClick: function onClick($event) {
         return $setup.desactiveAgent(user.id);
       },
       "class": "flex items-center text-theme-6"
-    }, [_hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Désactivé ")], 8 /* PROPS */, _hoisted_16)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <a class=\"flex items-center text-theme-6\" href=\"javascript:;\" data-toggle=\"modal\" data-target=\"#delete-confirmation-modal\"> <i data-feather=\"trash-2\" class=\"w-4 h-4 mr-1\"></i> Delete </a>\r\n                                            ")])])]);
-  }), 128 /* KEYED_FRAGMENT */))])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" END: Data List "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" BEGIN: Pagination "), _hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" END: Pagination ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" BEGIN: Delete Confirmation Modal "), _hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" END: Delete Confirmation Modal ")])]);
+    }, " Désactivé ", 8 /* PROPS */, _hoisted_15)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <a class=\"flex items-center text-theme-6\" href=\"javascript:;\" data-toggle=\"modal\" data-target=\"#delete-confirmation-modal\"> <i data-feather=\"trash-2\" class=\"w-4 h-4 mr-1\"></i> Delete </a>\r\n                                            ")])])]);
+  }), 128 /* KEYED_FRAGMENT */))])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" END: Data List "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" BEGIN: Pagination "), _hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" END: Pagination ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" BEGIN: Delete Confirmation Modal "), _hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" END: Delete Confirmation Modal ")])]);
 }
 
 /***/ }),
