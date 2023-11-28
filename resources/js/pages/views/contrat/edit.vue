@@ -3,7 +3,7 @@
           <Header />
           <div class="content p-24" >
               <div class="intro-y box lg:mt-5 p-12">
-                <h1>Ajouter un contrat</h1>
+                <h1>Modifier contrat</h1>
                 <select  class="input border mt-2 mb-4 w-full" v-model="contrat.user_id">
 
                     <option value="" selected>Choisir un agent</option>

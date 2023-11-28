@@ -4,8 +4,8 @@ import router from "./../../router/index.js"
 
 const user = ref({})
 
-const getAuthUser = () => {
-    axios.get('/api/info_auth_user').then((response) => {
+const getAuthUser = async () => {
+   await axios.get('/api/info_auth_user').then((response) => {
         user.value = response.data
         console.log('user',response.data)
     })
@@ -16,8 +16,9 @@ const logout = () => {
     router.push("/login");
 };
 
-onMounted(() => {
-    getAuthUser()
+onMounted( async () => {
+   await getAuthUser()
+    feather.replace()
     
 })
 
@@ -391,8 +392,8 @@ onMounted(() => {
                 </li> -->
                 <li>
                     <a href="javascript:;" class="top-menu top-menu--active">
-                        <div class="top-menu__icon"> <i data-feather="box"></i> </div>
-                        <div class="top-menu__title"> SUIVI DOSSIER <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
+                        <div class="top-menu__icon"> <i data-feather="box" style="color:rgb(3, 87, 3);"></i> </div>
+                        <div class="top-menu__title" style="color:rgb(3, 87, 3);"> SUIVI DOSSIER <i data-feather="chevron-down" class="top-menu__sub-icon" style="color:green;"></i> </div>
                     </a>
                     <ul class="" style="background-color: rgb(4, 141, 4);">
                         <li>
@@ -418,8 +419,8 @@ onMounted(() => {
                 </li>
                 <li>
                     <router-link to="/affiliation" class="top-menu top-menu--active">
-                        <div class="top-menu__icon"> <i data-feather="box"></i> </div>
-                        <div class="top-menu__title"> AFFILIATION <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
+                        <div class="top-menu__icon"> <i data-feather="box" style="color:rgb(3, 87, 3);"></i> </div>
+                        <div class="top-menu__title" style="color:rgb(3, 87, 3);"> AFFILIATION <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
                     </router-link>
                     <!-- <ul class="" style="background-color: rgb(4, 141, 4);">
                         <li>
@@ -446,8 +447,8 @@ onMounted(() => {
                
                 <li>
                     <a href="javascript:;" class="top-menu top-menu--active">
-                        <div class="top-menu__icon"> <i data-feather="box"></i> </div>
-                        <div class="top-menu__title"> FORMATION <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
+                        <div class="top-menu__icon" > <i data-feather="box" style="color:rgb(3, 87, 3);"></i> </div>
+                        <div class="top-menu__title" style="color:rgb(3, 87, 3);"> FORMATION <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
                     </a>
                     <ul class="" style="background-color: rgb(4, 141, 4);">
                         <li>
@@ -467,8 +468,8 @@ onMounted(() => {
                 </li>
                 <li v-if="user.role == 'admin'">
                     <a href="javascript:;" class="top-menu top-menu--active">
-                        <div class="top-menu__icon"> <i data-feather="box"></i> </div>
-                        <div class="top-menu__title"> FACTURATION <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
+                        <div class="top-menu__icon"> <i data-feather="box" style="color:rgb(3, 87, 3);"></i> </div>
+                        <div class="top-menu__title" style="color:rgb(3, 87, 3);"> FACTURATION <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
                     </a>
                     <ul class="" style="background-color: rgb(4, 141, 4);">
                         <li>
@@ -488,8 +489,8 @@ onMounted(() => {
                 </li>
                 <li v-if="user.role == 'admin'">
                     <a href="javascript:;" class="top-menu top-menu--active">
-                        <div class="top-menu__icon"> <i data-feather="box"></i> </div>
-                        <div class="top-menu__title"> ESPACE COMMERCIAUX <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
+                        <div class="top-menu__icon"> <i data-feather="box" style="color:rgb(3, 87, 3);"></i> </div>
+                        <div class="top-menu__title" style="color:rgb(3, 87, 3);"> ESPACE COMMERCIAUX <i data-feather="chevron-down" class="top-menu__sub-icon"></i> </div>
                     </a>
                     <ul class="" style="background-color: rgb(4, 141, 4);">
                         <li>
