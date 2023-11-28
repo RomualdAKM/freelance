@@ -65,7 +65,7 @@ onMounted(() => {
                                        <td class="text-center">{{ affilier.first_name }}</td>
                                        <td class="text-center">{{ affilier.email }}</td>
                                        <td class="text-center">{{ affilier.phone }}</td>
-                                       <td class="text-center"></td>
+                                       <td class="text-center">Niveau 1</td>
                                        <!-- <td class="w-40">
                                            <div class="flex items-center justify-center text-theme-9"> <i data-feather="check-square" class="w-4 h-4 mr-2"></i> {{ dossier.status }} </div>
                                        </td> -->

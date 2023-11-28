@@ -23001,7 +23001,7 @@ var _hoisted_11 = {
 };
 var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
   "class": "text-center"
-}, null, -1 /* HOISTED */);
+}, "Niveau 1", -1 /* HOISTED */);
 var _hoisted_13 = {
   "class": "table-report__action w-56"
 };
@@ -23100,7 +23100,7 @@ var _hoisted_11 = {
 };
 var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
   "class": "text-center"
-}, null, -1 /* HOISTED */);
+}, "Niveau 2", -1 /* HOISTED */);
 var _hoisted_13 = {
   "class": "table-report__action w-56"
 };
