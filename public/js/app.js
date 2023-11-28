@@ -23171,19 +23171,18 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 var _hoisted_3 = {
   "class": "grid grid-cols-12 gap-6 mt-5"
 };
-var _hoisted_4 = {
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "intro-y col-span-12 flex justify-between flex-wrap sm:flex-no-wrap items-center mt-2"
-};
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <router-link to=\"/add-client\" class=\"button text-white bg-theme-1 shadow-md mr-2\" style=\"background-color: rgb(4, 141, 4);\">Nouveau Client</router-link>\r\n                           "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"hidden md:block mx-auto text-gray-600\">Showing 1 to 10 of 150 entries</div> "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"w-56 relative text-gray-700 dark:text-gray-300\">\r\n                                   <input type=\"text\" v-model=\"search\" @change=\"getCustomers()\" class=\"input w-56 box pr-10 placeholder-theme-13\" placeholder=\"Search...\">\r\n                                   <i class=\"w-4 h-4 absolute my-auto inset-y-0 mr-3 right-0\" data-feather=\"search\"></i> \r\n                               </div> ")], -1 /* HOISTED */);
-var _hoisted_6 = {
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"w-56 relative text-gray-700 dark:text-gray-300\">\r\n                                   <input type=\"text\" v-model=\"search\" @change=\"getCustomers()\" class=\"input w-56 box pr-10 placeholder-theme-13\" placeholder=\"Search...\">\r\n                                   <i class=\"w-4 h-4 absolute my-auto inset-y-0 mr-3 right-0\" data-feather=\"search\"></i> \r\n                               </div> ")])], -1 /* HOISTED */);
+var _hoisted_5 = {
   "class": "intro-y col-span-12 overflow-auto lg:overflow-visible"
 };
-var _hoisted_7 = {
+var _hoisted_6 = {
   "class": "table table-report -mt-2"
 };
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   "class": "whitespace-no-wrap"
 }, "NOM"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   "class": "text-center whitespace-no-wrap"
@@ -23194,9 +23193,12 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 }, "TEL"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   "class": "text-center whitespace-no-wrap"
 }, "ACTIONS")])], -1 /* HOISTED */);
-var _hoisted_9 = {
+var _hoisted_8 = {
   href: "#",
   "class": "font-medium whitespace-no-wrap"
+};
+var _hoisted_9 = {
+  "class": "text-center"
 };
 var _hoisted_10 = {
   "class": "text-center"
@@ -23205,61 +23207,46 @@ var _hoisted_11 = {
   "class": "text-center"
 };
 var _hoisted_12 = {
-  "class": "text-center"
-};
-var _hoisted_13 = {
   "class": "table-report__action w-56"
 };
-var _hoisted_14 = {
+var _hoisted_13 = {
   "class": "flex justify-center items-center"
 };
-var _hoisted_15 = ["onClick"];
-var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+var _hoisted_14 = ["onClick"];
+var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "data-feather": "trash-2",
   "class": "w-4 h-4 mr-1"
 }, null, -1 /* HOISTED */);
-var _hoisted_17 = ["onClick"];
-var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+var _hoisted_16 = ["onClick"];
+var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "data-feather": "trash-2",
   "class": "w-4 h-4 mr-1"
 }, null, -1 /* HOISTED */);
-var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "intro-y col-span-12 flex flex-wrap sm:flex-row sm:flex-no-wrap items-center"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <ul class=\"pagination\">\r\n                               <li>\r\n                                   <a class=\"pagination__link\" href=\"#\"> <i class=\"w-4 h-4\" data-feather=\"chevrons-left\"></i> </a>\r\n                               </li>\r\n                               <li>\r\n                                   <a class=\"pagination__link\" href=\"#\"> <i class=\"w-4 h-4\" data-feather=\"chevron-left\"></i> </a>\r\n                               </li>\r\n                               <li> <a class=\"pagination__link\" href=\"#\">...</a> </li>\r\n                               <li> <a class=\"pagination__link\" href=\"#\">1</a> </li>\r\n                               <li> <a class=\"pagination__link pagination__link--active\" href=\"#\">2</a> </li>\r\n                               <li> <a class=\"pagination__link\" href=\"#\">3</a> </li>\r\n                               <li> <a class=\"pagination__link\" href=\"#\">...</a> </li>\r\n                               <li>\r\n                                   <a class=\"pagination__link\" href=\"#\"> <i class=\"w-4 h-4\" data-feather=\"chevron-right\"></i> </a>\r\n                               </li>\r\n                               <li>\r\n                                   <a class=\"pagination__link\" href=\"#\"> <i class=\"w-4 h-4\" data-feather=\"chevrons-right\"></i> </a>\r\n                               </li>\r\n                           </ul> "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <select class=\"w-20 input box mt-3 sm:mt-0\">\r\n                               <option>10</option>\r\n                               <option>25</option>\r\n                               <option>35</option>\r\n                               <option>50</option>\r\n                           </select> ")], -1 /* HOISTED */);
-var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"modal\" id=\"delete-confirmation-modal\"><div class=\"modal__content\"><div class=\"p-5 text-center\"><i data-feather=\"x-circle\" class=\"w-16 h-16 text-theme-6 mx-auto mt-3\"></i><div class=\"text-3xl mt-5\">Are you sure?</div><div class=\"text-gray-600 mt-2\">Do you really want to delete these records? This process cannot be undone.</div></div><div class=\"px-5 pb-8 text-center\"><button type=\"button\" data-dismiss=\"modal\" class=\"button w-24 border text-gray-700 mr-1\">Cancel</button><button type=\"button\" class=\"button w-24 bg-theme-6 text-white\">Delete</button></div></div></div>", 1);
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"modal\" id=\"delete-confirmation-modal\"><div class=\"modal__content\"><div class=\"p-5 text-center\"><i data-feather=\"x-circle\" class=\"w-16 h-16 text-theme-6 mx-auto mt-3\"></i><div class=\"text-3xl mt-5\">Are you sure?</div><div class=\"text-gray-600 mt-2\">Do you really want to delete these records? This process cannot be undone.</div></div><div class=\"px-5 pb-8 text-center\"><button type=\"button\" data-dismiss=\"modal\" class=\"button w-24 border text-gray-700 mr-1\">Cancel</button><button type=\"button\" class=\"button w-24 bg-theme-6 text-white\">Delete</button></div></div></div>", 1);
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Header"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" END: Top Bar "), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
-    to: "/add-client",
-    "class": "button text-white bg-theme-1 shadow-md mr-2",
-    style: {
-      "background-color": "rgb(4, 141, 4)"
-    }
-  }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Nouveau Client")];
-    }),
-    _: 1 /* STABLE */
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"hidden md:block mx-auto text-gray-600\">Showing 1 to 10 of 150 entries</div> "), _hoisted_5]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" BEGIN: Data List "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_7, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.users, function (user) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Header"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" END: Top Bar "), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" BEGIN: Data List "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.users, function (user) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", {
       "class": "intro-x",
       key: user.id
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(user.name), 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(user.first_name), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(user.email), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(user.phone), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <td class=\"w-40\">\r\n                                           <div class=\"flex items-center justify-center text-theme-9\"> <i data-feather=\"check-square\" class=\"w-4 h-4 mr-2\"></i> {{ dossier.status }} </div>\r\n                                       </td> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <router-link :to=\"{name: 'editDossier',params:{dossierId:dossier.id}}\" class=\"flex items-center mr-3\" > <i data-feather=\"check-square\" class=\"w-4 h-4 mr-1\"></i> Modifier </router-link> "), user.is_active == 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", {
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(user.name), 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(user.first_name), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(user.email), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(user.phone), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <td class=\"w-40\">\r\n                                           <div class=\"flex items-center justify-center text-theme-9\"> <i data-feather=\"check-square\" class=\"w-4 h-4 mr-2\"></i> {{ dossier.status }} </div>\r\n                                       </td> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <router-link :to=\"{name: 'editDossier',params:{dossierId:dossier.id}}\" class=\"flex items-center mr-3\" > <i data-feather=\"check-square\" class=\"w-4 h-4 mr-1\"></i> Modifier </router-link> "), user.is_active == 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", {
       key: 0,
       type: "button",
       onClick: function onClick($event) {
         return $setup.activeAgent(user.id);
       },
       "class": "flex items-center text-theme-1"
-    }, [_hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Activé ")], 8 /* PROPS */, _hoisted_15)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), user.is_active == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", {
+    }, [_hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Activé ")], 8 /* PROPS */, _hoisted_14)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), user.is_active == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", {
       key: 1,
       type: "button",
       onClick: function onClick($event) {
         return $setup.desactiveAgent(user.id);
       },
       "class": "flex items-center text-theme-6"
-    }, [_hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Désactivé ")], 8 /* PROPS */, _hoisted_17)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <a class=\"flex items-center text-theme-6\" href=\"javascript:;\" data-toggle=\"modal\" data-target=\"#delete-confirmation-modal\"> <i data-feather=\"trash-2\" class=\"w-4 h-4 mr-1\"></i> Delete </a>\r\n                                            ")])])]);
-  }), 128 /* KEYED_FRAGMENT */))])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" END: Data List "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" BEGIN: Pagination "), _hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" END: Pagination ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" BEGIN: Delete Confirmation Modal "), _hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" END: Delete Confirmation Modal ")])]);
+    }, [_hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Désactivé ")], 8 /* PROPS */, _hoisted_16)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <a class=\"flex items-center text-theme-6\" href=\"javascript:;\" data-toggle=\"modal\" data-target=\"#delete-confirmation-modal\"> <i data-feather=\"trash-2\" class=\"w-4 h-4 mr-1\"></i> Delete </a>\r\n                                            ")])])]);
+  }), 128 /* KEYED_FRAGMENT */))])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" END: Data List "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" BEGIN: Pagination "), _hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" END: Pagination ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" BEGIN: Delete Confirmation Modal "), _hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" END: Delete Confirmation Modal ")])]);
 }
 
 /***/ }),
