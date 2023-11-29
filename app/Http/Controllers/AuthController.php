@@ -10,6 +10,7 @@ use App\Mail\RegisterMail;
 use App\Models\CodeParrain;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Mail\ForgotPasswordMail;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
@@ -149,7 +150,7 @@ class AuthController extends Controller
         } else {
             $response = [
                 'success' => false,
-                'message' => "!!!!!! Ces coordonnees ne sont pas enregistrez : ressayez ou creer un compte"
+                'message' => "!!! Ces coordonnees ne sont pas enregistrez ou votre compte n'est pas encore activé"
             ];
             return response()->json($response);
         }
@@ -245,6 +246,43 @@ class AuthController extends Controller
 
        // Mail::to($user->email)->send(new PasswordMail($user->email, $password));
 
+    }
+
+    public function forgot_password(Request $request){
+
+        $validator = Validator()->make($request->all(),[
+            'email' => 'required|email'
+        ]);
+
+        if ($validator->fails()) {
+            $response = [
+                'success' => false,
+                'message' => $validator->errors()
+            ];
+            return response()->json(
+                $response
+            );
+        }
+
+        $newPassword = Str::random(8);
+
+        Mail::to($request->email)->send(new ForgotPasswordMail($newPassword));
+
+        $user = User::where('email',$request->email)->first();
+
+        $input['password'] = bcrypt($newPassword);
+        $user->password = $input['password'];
+
+        $user->save();
+
+        $response = [
+            'success' => true,
+            'message' => 'Vous Avez recu un nouveau mot de passe, Veillez consulter votre Email'
+        ];
+        return response()->json(
+            $response,
+            200
+        );
     }
 
     

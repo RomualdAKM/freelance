@@ -34,6 +34,8 @@ Route::controller(AuthController::class)->group(function(){
     Route::get('active_user/{id}','active_user');
     Route::get('desactive_user/{id}','desactive_user');
     Route::post('change_password','change_password');
+    Route::post('forgot_password','forgot_password');
+
 
 });
 

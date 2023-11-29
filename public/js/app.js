@@ -19666,12 +19666,46 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       email: "",
       password: ""
     });
-    var login = /*#__PURE__*/function () {
-      var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+    var email = (0,vue__WEBPACK_IMPORTED_MODULE_0__.reactive)('');
+    var getNewPassword = /*#__PURE__*/function () {
+      var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(email) {
         return _regeneratorRuntime().wrap(function _callee$(_context) {
           while (1) switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
+              return axios.post("api/forgot_password", {
+                email: email
+              }).then(function (response) {
+                if (response.data.success) {
+                  _router_index_js__WEBPACK_IMPORTED_MODULE_1__["default"].push("/login");
+                  toast.fire({
+                    icon: "success",
+                    title: "Verifier votre Email"
+                  });
+                } else {
+                  toast.fire({
+                    icon: "error",
+                    title: "entrez un email valide"
+                  });
+                  console.log('error', response.data.message);
+                }
+              });
+            case 2:
+            case "end":
+              return _context.stop();
+          }
+        }, _callee);
+      }));
+      return function getNewPassword(_x) {
+        return _ref2.apply(this, arguments);
+      };
+    }();
+    var login = /*#__PURE__*/function () {
+      var _ref3 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+        return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+          while (1) switch (_context2.prev = _context2.next) {
+            case 0:
+              _context2.next = 2;
               return axios.post("api/login", form).then(function (response) {
                 if (response.data.success) {
                   localStorage.setItem("token", response.data.data.token);
@@ -19689,12 +19723,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               });
             case 2:
             case "end":
-              return _context.stop();
+              return _context2.stop();
           }
-        }, _callee);
+        }, _callee2);
       }));
       return function login() {
-        return _ref2.apply(this, arguments);
+        return _ref3.apply(this, arguments);
       };
     }();
     var __returned__ = {
@@ -19704,6 +19738,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       set form(v) {
         form = v;
       },
+      get email() {
+        return email;
+      },
+      set email(v) {
+        email = v;
+      },
+      getNewPassword: getNewPassword,
       login: login,
       reactive: vue__WEBPACK_IMPORTED_MODULE_0__.reactive,
       ref: vue__WEBPACK_IMPORTED_MODULE_0__.ref,
@@ -23330,30 +23371,26 @@ var _hoisted_3 = {
 };
 var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"hidden xl:flex flex-col min-h-screen\"><a href=\"#\" class=\"-intro-x flex items-center pt-5\"><img alt=\"Midone Tailwind HTML Admin Template\" class=\"w-6\" src=\"/FRE2E_COMPANY.jpg\"><span class=\"text-white text-lg ml-3\"> FR2E COMPANY </span></a><div class=\"my-auto\"><img alt=\"Midone Tailwind HTML Admin Template\" class=\"-intro-x w-1/2 -mt-16\" src=\"/dist/images/illustration.svg\"><div class=\"-intro-x text-white font-medium text-4xl leading-tight mt-10\"> Encore quelques clics <br> pour vous connecter à votre compte. </div></div></div>", 1);
 var _hoisted_5 = {
+  "class": "modal",
+  id: "basic-modal-preview"
+};
+var _hoisted_6 = {
+  "class": "modal__content p-10 text-center"
+};
+var _hoisted_7 = {
   "class": "my-auto mx-auto xl:ml-20 bg-white xl:bg-transparent px-5 sm:px-8 py-8 xl:p-0 rounded-md shadow-md xl:shadow-none w-full sm:w-3/4 lg:w-2/4 xl:w-auto"
 };
-var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", {
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", {
   "class": "intro-x font-bold text-2xl xl:text-3xl text-center xl:text-left"
 }, " Connexion ", -1 /* HOISTED */);
-var _hoisted_7 = {
+var _hoisted_9 = {
   "class": "intro-x mt-8"
 };
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "intro-x flex text-gray-700 dark:text-gray-600 text-xs sm:text-sm mt-4"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "flex items-center mr-auto"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-  type: "checkbox",
-  "class": "input border mr-2",
-  id: "remember-me"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "class": "cursor-pointer select-none",
-  "for": "remember-me"
-}, "Remember me")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <a href=\"#\">Forgot Password?</a>  ")], -1 /* HOISTED */);
-var _hoisted_9 = {
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"intro-x flex text-gray-700 dark:text-gray-600 text-xs sm:text-sm mt-4\"><div class=\"flex items-center mr-auto\"><input type=\"checkbox\" class=\"input border mr-2\" id=\"remember-me\"><label class=\"cursor-pointer select-none\" for=\"remember-me\">Se souvenir de moi</label></div><a href=\"javascript:;\" data-toggle=\"modal\" data-target=\"#basic-modal-preview\">Mot de passe oublié?</a></div>", 1);
+var _hoisted_11 = {
   "class": "intro-x flex justify-between mt-5 xl:mt-8 text-center xl:text-left"
 };
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   type: "submit",
   "class": "button button--lg w-full xl:w-32 h-10 text-white bg-theme-1 mt-3 xl:mr-3 align-top",
   style: {
@@ -23363,26 +23400,42 @@ var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" BEGIN: Login Info "), _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" END: Login Info "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" BEGIN: Login Form "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
-    onSubmit: _cache[2] || (_cache[2] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function ($event) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" BEGIN: Login Info "), _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" END: Login Info "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" BEGIN: Login Form "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "email",
+    "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
+      return $setup.email = $event;
+    }),
+    "class": "intro-x w-full input input--lg border border-gray-300 block",
+    placeholder: "Email"
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.email]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    type: "button",
+    onClick: _cache[1] || (_cache[1] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function ($event) {
+      return $setup.getNewPassword($setup.email);
+    }, ["prevent"])),
+    "class": "button button--lg w-full xl:w-32 h-10 text-white bg-theme-1 mt-3 xl:mr-3 align-top",
+    style: {
+      "background-color": "#08cf3a"
+    }
+  }, "Validé")])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
+    onSubmit: _cache[4] || (_cache[4] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function ($event) {
       return $setup.login();
     }, ["prevent"])),
     "class": "h-screen xl:h-auto flex py-5 xl:py-0 my-10 xl:my-0"
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [_hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
-    "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
+    "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
       return $setup.form.email = $event;
     }),
     "class": "intro-x login__input input input--lg border border-gray-300 block",
     placeholder: "Email"
   }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.email]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "password",
-    "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
+    "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
       return $setup.form.password = $event;
     }),
     "class": "intro-x login__input input input--lg border border-gray-300 block mt-4",
     placeholder: "Password"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.password]])]), _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [_hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.password]])]), _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: "/register",
     "class": "button button--lg w-full xl:w-32 h-10 text-gray-700 border mt-3 border-gray-400 dark:border-dark-5 dark:text-gray-300 xl:mt-3 align-top"
   }, {

@@ -8,7 +8,26 @@ let form = reactive({
     password: "",
 });
 
+let email = reactive('')
 
+const getNewPassword = async (email) => {
+        await axios.post("api/forgot_password", { email: email }).then((response)=>{
+            if(response.data.success){
+                router.push("/login")
+                toast.fire({
+                    icon: "success",
+                    title: "Verifier votre Email",
+                });
+            }else{
+                toast.fire({
+                    icon: "error",
+                    title: "entrez un email valide",
+             });
+             console.log('error',response.data.message)
+            }
+        })
+
+    }
 
 const login = async () => {
     await axios.post("api/login", form).then((response) => {
@@ -54,7 +73,14 @@ const login = async () => {
                     </div>
                     <!-- END: Login Info -->
                     <!-- BEGIN: Login Form -->
-                    
+                    <div class="modal" id="basic-modal-preview">
+                        <div class="modal__content p-10 text-center"> 
+
+                            <input type="email" v-model="email" class="intro-x w-full input input--lg border border-gray-300 block" placeholder="Email">
+                            <button type="button" @click.prevent="getNewPassword(email)" class="button button--lg w-full xl:w-32 h-10 text-white bg-theme-1 mt-3 xl:mr-3 align-top" style="background-color: #08cf3a">Validé</button>
+                               
+                        </div>
+                    </div>
                     <form @submit.prevent="login()" class="h-screen xl:h-auto flex py-5 xl:py-0 my-10 xl:my-0">
                         <div class="my-auto mx-auto xl:ml-20 bg-white xl:bg-transparent px-5 sm:px-8 py-8 xl:p-0 rounded-md shadow-md xl:shadow-none w-full sm:w-3/4 lg:w-2/4 xl:w-auto">
                             <h2 class="intro-x font-bold text-2xl xl:text-3xl text-center xl:text-left">
@@ -67,9 +93,9 @@ const login = async () => {
                             <div class="intro-x flex text-gray-700 dark:text-gray-600 text-xs sm:text-sm mt-4">
                                 <div class="flex items-center mr-auto">
                                     <input type="checkbox" class="input border mr-2" id="remember-me">
-                                    <label class="cursor-pointer select-none" for="remember-me">Remember me</label>
+                                    <label class="cursor-pointer select-none" for="remember-me">Se souvenir de moi</label>
                                 </div>
-                                <!-- <a href="#">Forgot Password?</a>  -->
+                                <a href="javascript:;" data-toggle="modal" data-target="#basic-modal-preview">Mot de passe oublié?</a> 
                             </div>
                             <div class="intro-x flex justify-between mt-5 xl:mt-8 text-center xl:text-left">
                                 <button type="submit" class="button button--lg w-full xl:w-32 h-10 text-white bg-theme-1 mt-3 xl:mr-3 align-top" style="background-color: #08cf3a">Connexion</button>
