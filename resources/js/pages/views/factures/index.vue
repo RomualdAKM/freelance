@@ -155,7 +155,7 @@ onMounted(() => {
                        <!-- END: Data List -->
                        <!-- BEGIN: Pagination -->
                        <div class="intro-y col-span-12 flex flex-wrap sm:flex-row sm:flex-no-wrap items-center">
-                           <ul class="pagination">
+                           <!-- <ul class="pagination">
                                <li>
                                    <a class="pagination__link" href="#"> <i class="w-4 h-4" data-feather="chevrons-left"></i> </a>
                                </li>
@@ -173,7 +173,7 @@ onMounted(() => {
                                <li>
                                    <a class="pagination__link" href="#"> <i class="w-4 h-4" data-feather="chevrons-right"></i> </a>
                                </li>
-                           </ul>
+                           </ul> -->
                            <!-- <select class="w-20 input box mt-3 sm:mt-0">
                                <option>10</option>
                                <option>25</option>

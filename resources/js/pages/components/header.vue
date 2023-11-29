@@ -308,12 +308,12 @@ onMounted( async () => {
                 </div> -->
                 <!-- END: Notifications -->
                 <!-- BEGIN: Account Menu -->
-                <div class="intro-x dropdown w-8 h-8">
+                <div class="intro-x dropdown w-8 h-8" >
                     <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in scale-110">
                         <img alt="Midone Tailwind HTML Admin Template" src="/dist/images/profile-13.jpg">
                     </div>
-                    <div class="dropdown-box w-56">
-                        <div class="dropdown-box__content box bg-theme-38 dark:bg-dark-6 text-white">
+                    <div class="dropdown-box w-56" >
+                        <div class="dropdown-box__content box bg-theme-38 dark:bg-dark-6 text-white" style="background-color: green;">
                             <div class="p-4 border-b border-theme-40 dark:border-dark-3">
                                 <div class="font-medium">{{user.name}} {{user.first_name}}</div>
                                 <div class="text-xs text-theme-41 dark:text-gray-600">{{ user.email }}</div>
@@ -326,7 +326,7 @@ onMounted( async () => {
                                 <!-- <a href="#" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"> <i data-feather="help-circle" class="w-4 h-4 mr-2"></i> Help </a> -->
                             </div>
                             <div class="p-2 border-t border-theme-40 dark:border-dark-3">
-                                <p class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"> <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> CODE PARRAINAGE : {{ user.code }} </p>
+                                <p class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"> CODE PARRAINAGE : {{ user.code }} </p>
                             </div>
                             <div class="p-2 border-t border-theme-40 dark:border-dark-3">
                                 <a href="#" @click="logout" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"> <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Déconnexion </a>
@@ -391,25 +391,25 @@ onMounted( async () => {
                     </ul>
                 </li> -->
                 <li>
-                    <a href="javascript:;" class="top-menu top-menu--active">
+                    <a href="javascript:;" class="top-menu top-menu--active" :class="{ 'side-menu--active': $route.path === '/dossiers' }">
                         <div class="top-menu__icon"> <i data-feather="box" style="color:rgb(3, 87, 3);"></i> </div>
                         <div class="top-menu__title" style="color:rgb(3, 87, 3);"> SUIVI DOSSIER <i data-feather="chevron-down" class="top-menu__sub-icon" style="color:green;"></i> </div>
                     </a>
                     <ul class="" style="background-color: rgb(4, 141, 4);">
                         <li>
-                            <a href="index.html" class="top-menu">
+                            <a href="#" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
                                 <router-link to="/dossiers" class="top-menu__title"> LISTE</router-link>
                             </a>
                         </li>
                         <li>
-                            <a href="simple-menu-light-dashboard.html" class="top-menu">
+                            <a href="#" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
                                 <router-link to="/add-dossier" class="top-menu__title"> AJOUTER </router-link>
                             </a>
                         </li>
                         <li v-if="user.role == 'admin'">
-                            <a href="simple-menu-light-dashboard.html" class="top-menu">
+                            <a href="#" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
                                 <router-link to="/all-dossiers" class="top-menu__title"> DOSSIERS </router-link>
                             </a>
@@ -432,13 +432,13 @@ onMounted( async () => {
                     </a>
                     <ul class="" style="background-color: rgb(4, 141, 4);">
                         <li>
-                            <a href="index.html" class="top-menu">
+                            <a href="#" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
                                 <router-link to="/formations" class="top-menu__title"> LISTE</router-link>
                             </a>
                         </li>
                         <li v-if="user.role == 'admin'">
-                            <a href="simple-menu-light-dashboard.html" class="top-menu">
+                            <a href="#" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
                                 <router-link to="/add-formation" class="top-menu__title"> AJOUTER </router-link>
                             </a>
@@ -453,13 +453,13 @@ onMounted( async () => {
                     </a>
                     <ul class="" style="background-color: rgb(4, 141, 4);">
                         <li>
-                            <a href="index.html" class="top-menu">
+                            <a href="#" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
                                 <router-link to="/factures" class="top-menu__title"> LISTE</router-link>
                             </a>
                         </li>
                         <li>
-                            <a href="simple-menu-light-dashboard.html" class="top-menu">
+                            <a href="#" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
                                 <router-link to="/add-facture" class="top-menu__title"> AJOUTER </router-link>
                             </a>
@@ -474,15 +474,16 @@ onMounted( async () => {
                     </a>
                     <ul class="" style="background-color: rgb(4, 141, 4);">
                         <li>
-                            <a href="index.html" class="top-menu">
+                            <a href="#" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
                                 <router-link to="/contrats" class="top-menu__title"> CONTRAT</router-link>
                             </a>
                         </li>
                         <li>
-                            <a href="simple-menu-light-dashboard.html" class="top-menu">
+                            <a href="#" class="top-menu">
                                 <div class="top-menu__icon"> <i data-feather="activity"></i> </div>
-                                <router-link to="#" class="top-menu__title"> REMUNERATION </router-link>
+
+                                <router-link to="/remuneration" class="top-menu__title"> REMUNERATION </router-link>
                             </a>
                         </li>
                        

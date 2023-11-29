@@ -15,10 +15,9 @@
     </head>
     <body  style="background-color: rgb(3, 163, 3); z-index: 1000;">
         <div id="app" style="background-color: rgb(4, 141, 4);">
-
-            <script src="{{ asset('/dist/js/app.js')}}"></script>
-            {{-- <script src="{{ mix('js/appp.js') }}"></script> --}}
+            <script src="{{ mix('js/appp.js') }}"></script>
         </div>
+        <script src="{{ asset('/dist/js/app.js')}}"></script>
         <script src="{{ mix('js/app.js') }}"></script>
     </body>
 </html>

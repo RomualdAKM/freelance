@@ -35,6 +35,9 @@ import editContrat from '../pages/views/contrat/edit.vue'
 //agents
 import indexAgent from '../pages/views/agents//index.vue'
 
+//remuneration
+import indexRemuneration from '../pages/views/remuneration/index.vue'
+
 
 import notFound from '../pages/notFound.vue'
 
@@ -297,6 +300,18 @@ const routes = [
             requiresAuth: true
         }
         
+    },
+
+    //remuneration
+
+    {
+        name: 'indexRemuneration',
+        path: '/remuneration',
+        component: indexRemuneration,
+        meta: {
+            requiresAuth: true
+        }
+
     },
 
 
