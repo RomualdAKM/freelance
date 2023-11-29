@@ -81,7 +81,7 @@ const routes = [
     //dossiers
     {   
         name: 'indexDossier',
-        path: '/',
+        path: '/dossiers',
         component: indexDossier,
         meta: {
             requiresAuth: true

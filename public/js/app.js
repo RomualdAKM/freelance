@@ -26125,7 +26125,7 @@ var routes = [{
 //dossiers
 {
   name: 'indexDossier',
-  path: '/',
+  path: '/dossiers',
   component: _pages_views_dossiers_index_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
   meta: {
     requiresAuth: true
