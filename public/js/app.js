@@ -26093,17 +26093,14 @@ __webpack_require__.r(__webpack_exports__);
 //remuneration
 
 
-var routes = [
-// {   
-//     name: 'index',
-//     path: '/',
-//     component: index,
-//     meta: {
-//         requiresAuth: true
-//     }
-
-// },
-{
+var routes = [{
+  name: 'index',
+  path: '/',
+  component: _pages_views_index_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+  meta: {
+    requiresAuth: true
+  }
+}, {
   name: 'register',
   path: '/register',
   component: _pages_views_auth_register_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
@@ -26335,12 +26332,12 @@ router.beforeEach(function (to, from) {
       name: 'login'
     };
   }
-  if (to.meta.requiresAuth == false && localStorage.getItem('token')) {
-    return {
-      name: 'indexDossier'
-    };
-  }
+
+  // if(to.meta.requiresAuth == false && localStorage.getItem('token')){
+  //     return { name: 'indexDossier' }
+  // }
 });
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (router);
 
 /***/ }),
