@@ -42,15 +42,15 @@ import indexRemuneration from '../pages/views/remuneration/index.vue'
 import notFound from '../pages/notFound.vue'
 
 const routes = [
-    {   
-        name: 'index',
-        path: '/',
-        component: index,
-        meta: {
-            requiresAuth: true
-        }
+    // {   
+    //     name: 'index',
+    //     path: '/',
+    //     component: index,
+    //     meta: {
+    //         requiresAuth: true
+    //     }
         
-    },
+    // },
     {   
         name: 'register',
         path: '/register',
@@ -81,7 +81,7 @@ const routes = [
     //dossiers
     {   
         name: 'indexDossier',
-        path: '/dossiers',
+        path: '/',
         component: indexDossier,
         meta: {
             requiresAuth: true
@@ -336,9 +336,9 @@ router.beforeEach((to,from) =>{
         return { name: 'login' }
     }
 
-    // if(to.meta.requiresAuth == false && localStorage.getItem('token')){
-    //     return { name: 'indexDossier' }
-    // }
+    if(to.meta.requiresAuth == false && localStorage.getItem('token')){
+        return { name: 'indexDossier' }
+    }
 })
 
 

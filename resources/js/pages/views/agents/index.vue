@@ -89,6 +89,7 @@ onMounted(() => {
                                        <th class="text-center whitespace-no-wrap">PRENOM</th>
                                        <th class="text-center whitespace-no-wrap">EMAIL</th>
                                        <th class="text-center whitespace-no-wrap">TEL</th>
+                                       <th class="text-center whitespace-no-wrap">CODE PARRAIN</th>
                                        <th class="text-center whitespace-no-wrap">ACTIONS</th>
                                    </tr>
                                </thead>
@@ -102,6 +103,7 @@ onMounted(() => {
                                        <td class="text-center">{{ user.first_name }}</td>
                                        <td class="text-center">{{ user.email }}</td>
                                        <td class="text-center">{{ user.phone }}</td>
+                                       <td class="text-center">{{ user.code }}</td>
                                        <!-- <td class="w-40">
                                            <div class="flex items-center justify-center text-theme-9"> <i data-feather="check-square" class="w-4 h-4 mr-2"></i> {{ dossier.status }} </div>
                                        </td> -->

@@ -31,6 +31,7 @@ const login = async () => {
 </script>
 
 <template>
+
     <div class="login">
 
         <div class="container sm:px-10">
@@ -39,9 +40,9 @@ const login = async () => {
                     <div class="hidden xl:flex flex-col min-h-screen" >
                         <a href="#" class="-intro-x flex items-center pt-5">
                             <img alt="Midone Tailwind HTML Admin Template" class="w-6" src="/FRE2E_COMPANY.jpg">
-                            <span class="text-white text-lg ml-3"> FRE2E COMPANY </span>
+                            <span class="text-white text-lg ml-3"> FR2E COMPANY </span>
                         </a>
-                        <div class="my-auto" >
+                        <div class="my-auto">
                             <img alt="Midone Tailwind HTML Admin Template" class="-intro-x w-1/2 -mt-16" src="/dist/images/illustration.svg">
                             <div class="-intro-x text-white font-medium text-4xl leading-tight mt-10">
                                 Encore quelques clics 
@@ -71,7 +72,7 @@ const login = async () => {
                                 <!-- <a href="#">Forgot Password?</a>  -->
                             </div>
                             <div class="intro-x flex justify-between mt-5 xl:mt-8 text-center xl:text-left">
-                                <button type="submit" class="button button--lg w-full xl:w-32 h-10 text-white bg-theme-1 mt-3 xl:mr-3 align-top">Connexion</button>
+                                <button type="submit" class="button button--lg w-full xl:w-32 h-10 text-white bg-theme-1 mt-3 xl:mr-3 align-top" style="background-color: #08cf3a">Connexion</button>
                                 <router-link to="/register" class="button button--lg w-full xl:w-32 h-10 text-gray-700 border mt-3 border-gray-400 dark:border-dark-5 dark:text-gray-300 xl:mt-3 align-top">Inscription</router-link>
                             </div>
                             <!-- <div class="intro-x mt-10 xl:mt-24 text-gray-700 dark:text-gray-600 text-center xl:text-left">

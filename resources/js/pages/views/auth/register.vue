@@ -115,7 +115,7 @@ const changeCarte = (e) => {
                 <div class="hidden xl:flex flex-col min-h-screen">
                     <a href="#" class="-intro-x flex items-center pt-5">
                         <img alt="Midone Tailwind HTML Admin Template" class="w-6" src="/FRE2E_COMPANY.jpg">
-                        <span class="text-white text-lg ml-3"> FRE2E COMPANY </span>
+                        <span class="text-white text-lg ml-3"> FR2E COMPANY </span>
                     </a>
                     <div class="my-auto">
                         <img alt="Midone Tailwind HTML Admin Template" class="-intro-x w-1/2 -mt-16" src="/dist/images/illustration.svg">
@@ -207,7 +207,7 @@ const changeCarte = (e) => {
                             </div>
 
                             <div class="intro-x mt-5 mb-4 flex justify-between xl:mt-8 text-center xl:text-left">
-                                <button type="submit" class="button button--lg w-full xl:w-32 text-white bg-theme-1 xl:mr-3 align-top">Inscription</button>
+                                <button type="submit" class="button button--lg w-full xl:w-32 text-white bg-theme-1 xl:mr-3 align-top" style="background-color: #08cf3a">Inscription</button>
                                 <router-link to="/login" class="button button--lg w-full xl:w-32 text-gray-700 border border-gray-300 dark:border-dark-5 dark:text-gray-300 mt-3 xl:mt-0 align-top">Connexion</router-link>
                             </div>
                         </form>
