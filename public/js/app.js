@@ -22458,7 +22458,7 @@ var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
   alt: "Midone Tailwind HTML Admin Template",
   "class": "w-6",
-  src: "dist/images/logo.svg"
+  src: "/FRE2E_COMPANY.jpg"
 })], -1 /* HOISTED */);
 var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "data-feather": "bar-chart-2",
