@@ -1,8 +1,8 @@
 <template>
     <div>
           <Header />
-          <div class="content p-24" >
-              <div class="intro-y box lg:mt-5 p-12">
+          <div class="content p-4" >
+              <div class="intro-y box lg:mt-5 p-4">
                 <h1>Ajouter un contrat</h1>
                 <select  class="input border mt-2 mb-4 w-full" v-model="form.user_id">
 

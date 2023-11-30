@@ -75,7 +75,8 @@ class AuthController extends Controller
         // $input['password'] = bcrypt($input['password']);
 
        // $user = User::create($input);
-       $date = Carbon::now()->format('d/m/y');
+       //$date = Carbon::now()->format('d/m/y');
+       $date = Carbon::now()->format('dmy');
 
       // $mycode = strtoupper($input['name'].$input['first_name']).$date.'/1';
        $mycode = strtoupper(substr($input['name'], 0, 1) . substr($input['first_name'], 0, 1)).$date.'1';

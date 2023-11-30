@@ -26,7 +26,7 @@ onMounted(() => {
         <div  class="content">
             <!-- END: Top Bar -->
             <h2 class="intro-y text-lg font-medium mt-10">
-                       LISTES AFFILLIERS
+                       LISTES FILLEULS
             </h2>
             <div class="grid grid-cols-12 gap-6 mt-5">
                        <div class="intro-y col-span-12 flex justify-between flex-wrap sm:flex-no-wrap items-center mt-2">
@@ -51,7 +51,7 @@ onMounted(() => {
                                        <th class="text-center whitespace-no-wrap">EMAIL</th>
                                        <th class="text-center whitespace-no-wrap">TEL</th>
                                        <th class="text-center whitespace-no-wrap">NIVEAU</th>
-                                       <th class="text-center whitespace-no-wrap">AFFILLIERS</th>
+                                       <th class="text-center whitespace-no-wrap">FILLEULS</th>
 
                                    </tr>
                                </thead>

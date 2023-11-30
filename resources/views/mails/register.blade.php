@@ -9,8 +9,12 @@
 <body>
     
     <h1>
-        Vos informations ont été bien reçues, le contrat est en cours de rédaction 
+        Bonjour, <br>
+        Nous avons bien recus vos informations,  <br>
+        Nos équipes vont verifiés et vous éditer le contrat d'apporteur d'affaire, <br>
+        Merci à vous <br>
+        Excellente journée
     </h1>
-
+    
 </body>
 </html>

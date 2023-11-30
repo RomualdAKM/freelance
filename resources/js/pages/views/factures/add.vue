@@ -94,8 +94,8 @@ onMounted(() => {
 <template>
      <div>
         <Header />
-        <div class="content p-24" >
-            <div class="intro-y box lg:mt-5 p-12">
+        <div class="content p-4" >
+            <div class="intro-y box lg:mt-5 p-4">
                 <form >
                     <div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-2 mt-4 mb-12">                 

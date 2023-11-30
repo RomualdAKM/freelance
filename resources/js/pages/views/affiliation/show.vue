@@ -40,7 +40,7 @@ watch(route, async () => {
         <div  class="content">
             <!-- END: Top Bar -->
             <h2 class="intro-y text-lg font-medium mt-10">
-                LISTES AFFILLIERS
+                LISTES FILLEULS
             </h2>
             <div class="grid grid-cols-12 gap-6 mt-5">
                        <div class="intro-y col-span-12 flex justify-between flex-wrap sm:flex-no-wrap items-center mt-2">
@@ -131,7 +131,7 @@ watch(route, async () => {
                        <!-- END: Pagination -->
             </div>
             <!-- BEGIN: Delete Confirmation Modal -->
-            <div class="modal" id="delete-confirmation-modal">
+            <!-- <div class="modal" id="delete-confirmation-modal">
                        <div class="modal__content">
                            <div class="p-5 text-center">
                                <i data-feather="x-circle" class="w-16 h-16 text-theme-6 mx-auto mt-3"></i> 
@@ -143,7 +143,7 @@ watch(route, async () => {
                                <button type="button" class="button w-24 bg-theme-6 text-white">Delete</button>
                            </div>
                        </div>
-            </div>
+            </div> -->
             <!-- END: Delete Confirmation Modal -->
         </div>
     </div>

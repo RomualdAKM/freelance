@@ -133,7 +133,7 @@ const changeCarte = (e) => {
                         <h2 class="intro-x font-bold text-2xl xl:text-3xl text-center xl:text-left">
                             Créer un compte
                         </h2>
-                        <div class="intro-x mt-2 text-gray-500 dark:text-gray-500 xl:hidden text-center">A few more clicks to sign in to your account. Manage all your e-commerce accounts in one place</div>
+                        <div class="intro-x mt-2 text-gray-500 dark:text-gray-500 xl:hidden text-center">Quelques clics  pour créer votre compte.</div>
                         <form @submit.prevent="register()">
 
                             <div class="intro-x mt-8">
@@ -167,7 +167,7 @@ const changeCarte = (e) => {
                                     <input type="text" v-model="form.code" class="intro-x  input input--lg border border-gray-300 block" placeholder="Code Parrain">
                                
                             </div>
-                            <div class="flex bg-white items-center justify-center w-full mt-4">
+                            <!-- <div class="flex bg-white items-center justify-center w-full mt-4">
                                 <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-24 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
                                     <div class="flex flex-col items-center justify-center pt-5 pb-6">
                                         <svg class="w-8 h-8 mb-4 text-gray-800 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
@@ -178,7 +178,7 @@ const changeCarte = (e) => {
                                     </div>
                                     <input id="dropzone-file" type="file" class="hidden" @change="changePhoto"/>
                                 </label>
-                            </div> 
+                            </div>  -->
                             <div class="flex bg-white items-center justify-center w-full mt-4">
                                 <label for="dropzone-kbis" class="flex flex-col items-center justify-center w-full h-24 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
                                     <div class="flex flex-col items-center justify-center pt-5 pb-6">
@@ -197,12 +197,24 @@ const changeCarte = (e) => {
                                         <svg class="w-8 h-8 mb-4 text-gray-800 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
                                         </svg>
-                                        <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Choisissez la Carte D'Identité</span></p>
+                                        <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Choisissez la Carte D'Identité (Recto)</span></p>
                                        
                                     </div>
                                     <input id="dropzone-carte" type="file" class="hidden" @change="changeCarte"/>
                                 </label>
                             </div>
+                            <div class="flex bg-white items-center justify-center w-full mt-4">
+                                <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-24 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                                    <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                        <svg class="w-8 h-8 mb-4 text-gray-800 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                                        </svg>
+                                        <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Choisissez la Carte D'Identité (Verso)</span></p>
+                                       
+                                    </div>
+                                    <input id="dropzone-file" type="file" class="hidden" @change="changePhoto"/>
+                                </label>
+                            </div> 
                                
                             </div>
 

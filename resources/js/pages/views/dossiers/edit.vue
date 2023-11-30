@@ -54,8 +54,8 @@ await axios.post("/api/edit_document/" + dossier.value.id, dossier.value)
 <template>
      <div>
         <Header />
-        <div class="content p-24" >
-            <div class="intro-y box lg:mt-5 p-12">
+        <div class="content p-4" >
+            <div class="intro-y box lg:mt-5 p-4">
                 <form >
                     <div >
     
@@ -88,7 +88,7 @@ await axios.post("/api/edit_document/" + dossier.value.id, dossier.value)
                             v-model="dossier.date_bill"
                             
                         />
-                        <label>Satut</label>
+                        <label>Status</label>
 
                         <select class="input w-full border mt-2" v-model="dossier.status">
                             <option value="En traitement">En traitement</option>

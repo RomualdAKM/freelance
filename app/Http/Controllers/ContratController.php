@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Contrat;
+use App\Mail\ContratMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class ContratController extends Controller
@@ -16,7 +18,6 @@ class ContratController extends Controller
 
             'user_id' => 'required',
             'description' => 'required',
-            
             
         ]);
        //dd($request->all());
@@ -39,15 +40,15 @@ class ContratController extends Controller
 
        if($request->user_id !== 'tout'){
 
-
             $user = User::find($request->user_id);
 
             $user->contrats()->attach($contrat);
+
+            Mail::to($user->email)->send(new ContratMail());
             
        }else{
 
          $users = User::where('role','user')->get();
-
          
          foreach($users as $userLoop){
              
@@ -56,7 +57,10 @@ class ContratController extends Controller
             $user = User::find($request->user_id);
 
             $userLoop->contrats()->attach($contrat);
-        
+
+
+            Mail::to($userLoop->email)->send(new ContratMail());
+
        }
 
     }
@@ -131,7 +135,6 @@ class ContratController extends Controller
 
         if($request->user_id !== 'tout'){
 
-
             $user = User::find($request->user_id);
 
             $user->contrats()->attach($contrat);
@@ -140,7 +143,6 @@ class ContratController extends Controller
 
          $users = User::where('role','user')->get();
 
-         
          foreach($users as $userLoop){
              
            // dd($user);

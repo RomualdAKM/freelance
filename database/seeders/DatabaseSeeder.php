@@ -26,11 +26,10 @@ class DatabaseSeeder extends Seeder
             'adress' => 'Super Admin',
             'code' => 'SUPERADMIN',
             'is_active' => '1',
-            'email' => 'test@example.com',
+            'email' => 'contact@fr2e.fr',
             'password' => Hash::make('password'),
             'role' => 'admin',
         ]);
-
 
         // Parrain::factory()->create([
             

@@ -102,6 +102,8 @@ onMounted(() => {
 
                                                <router-link :to="{name: 'editDossier',params:{dossierId:dossier.id}}" class="flex items-center mr-3"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Modifier </router-link>
 
+                                               <!-- <router-link :to="{name: 'showDossier',params:{dossierId:dossier.id}}" class="flex items-center mr-3"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Voir </router-link> -->
+
                                                
                                                <button type="button" @click="deleteDossier(dossier.id)" class="flex items-center text-theme-6" href="javascript:;" data-toggle="modal" data-target="#delete-confirmation-modal"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Supprimer </button>
                                            </div>
@@ -116,7 +118,7 @@ onMounted(() => {
                        <!-- END: Data List -->
                        <!-- BEGIN: Pagination -->
                        <div class="intro-y col-span-12 flex flex-wrap sm:flex-row sm:flex-no-wrap items-center">
-                           <ul class="pagination">
+                           <!-- <ul class="pagination">
                                <li>
                                    <a class="pagination__link" href="#"> <i class="w-4 h-4" data-feather="chevrons-left"></i> </a>
                                </li>
@@ -134,7 +136,7 @@ onMounted(() => {
                                <li>
                                    <a class="pagination__link" href="#"> <i class="w-4 h-4" data-feather="chevrons-right"></i> </a>
                                </li>
-                           </ul>
+                           </ul> -->
                            <!-- <select class="w-20 input box mt-3 sm:mt-0">
                                <option>10</option>
                                <option>25</option>

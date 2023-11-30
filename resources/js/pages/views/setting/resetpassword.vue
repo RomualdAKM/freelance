@@ -41,7 +41,7 @@ const changePassword = async () => {
     <div>
         <Header />
         <!-- BEGIN: Content -->
-        <div class="content p-24">
+        <div class="content p-4">
             
 
                 <div class="grid grid-cols-12 gap-6">

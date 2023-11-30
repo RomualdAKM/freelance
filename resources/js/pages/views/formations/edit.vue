@@ -95,8 +95,8 @@ onMounted( async () => {
 <template>
      <div>
         <Header />
-        <div class="content p-24" >
-            <div class="intro-y box lg:mt-5 p-12">
+        <div class="content p-4" >
+            <div class="intro-y box lg:mt-5 p-4">
               <h1>Modifier</h1>
                         <input
                             type="text"

@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Document;
+use App\Mail\DossierMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class DocumentController extends Controller
@@ -21,19 +23,15 @@ class DocumentController extends Controller
             'phone' => 'required',
             'email' => 'required|email|unique:users',
             'dpe' => 'required',
-            'avis_imposition' => 'required',
+            'photo_impot' => 'required',
             'photo_maison1' => 'required',
             'photo_maison2' => 'required',
             'photo_maison3' => 'required',
             'photo_maison4' => 'required',
             'photo_comble1' => 'required',
             'photo_comble2' => 'required',
-            'photo_comble3' => 'required',
-            'photo_comble4' => 'required',
             'photo_sous_sol1' => 'required',
             'photo_sous_sol2' => 'required',
-            'photo_sous_sol3' => 'required',
-            'photo_sous_sol4' => 'required',
             'adress' => 'required',
                    
         ]);
@@ -58,10 +56,10 @@ class DocumentController extends Controller
         }
 
         
-        if ($request->hasFile('avis_imposition')) {
-            $avis_imposition = time() . '.' . $request->avis_imposition->extension();
-                $request->avis_imposition->move(public_path('avis_imposition'), $avis_imposition);
-                $pathAvis = $avis_imposition;
+        if ($request->hasFile('photo_impot')) {
+            $photo_impot = time() . '.' . $request->photo_impot->extension();
+                $request->photo_impot->move(public_path('avis_imposition'), $photo_impot);
+                $pathAvis = $photo_impot;
         } else {
             $pathAvis = null;
         }
@@ -112,20 +110,7 @@ class DocumentController extends Controller
         } else {
             $pathphoto_comble2 = null;
         }
-        if ($request->hasFile('photo_comble3')) {
-            $photo_comble3 = time() . '.' . $request->photo_comble3->extension();
-                $request->photo_comble3->move(public_path('combles'), $photo_comble3);
-                $pathphoto_comble3 = $photo_comble3;
-        } else {
-            $pathphoto_comble3 = null;
-        }
-        if ($request->hasFile('photo_comble4')) {
-            $photo_comble4 = time() . '.' . $request->photo_comble4->extension();
-                $request->photo_comble4->move(public_path('combles'), $photo_comble4);
-                $pathphoto_comble4 = $photo_comble4;
-        } else {
-            $pathphoto_comble4 = null;
-        }
+
         if ($request->hasFile('photo_sous_sol1')) {
             $photo_sous_sol1 = time() . '.' . $request->photo_sous_sol1->extension();
                 $request->photo_sous_sol1->move(public_path('sous_sol'), $photo_sous_sol1);
@@ -140,20 +125,7 @@ class DocumentController extends Controller
         } else {
             $pathphoto_sous_sol2 = null;
         }
-        if ($request->hasFile('photo_sous_sol3')) {
-            $photo_sous_sol3 = time() . '.' . $request->photo_sous_sol3->extension();
-                $request->photo_sous_sol3->move(public_path('sous_sol'), $photo_sous_sol3);
-                $pathphoto_sous_sol3 = $photo_sous_sol3;
-        } else {
-            $pathphoto_sous_sol3 = null;
-        }
-        if ($request->hasFile('photo_sous_sol4')) {
-            $photo_sous_sol4 = time() . '.' . $request->photo_sous_sol4->extension();
-                $request->photo_sous_sol4->move(public_path('sous_sol'), $photo_sous_sol4);
-                $pathphoto_sous_sol4 = $photo_sous_sol4;
-        } else {
-            $pathphoto_sous_sol4 = null;
-        }
+
 
         $dossier = new Document();
         $dossier->name = $request->name;
@@ -161,23 +133,21 @@ class DocumentController extends Controller
         $dossier->phone = $request->phone;
         $dossier->email = $request->email;
         $dossier->dpe = $pathDpe;
-        $dossier->avis_imposition = $pathAvis;
+        $dossier->photo_impot = $pathAvis;
         $dossier->photo_maison1 = $pathphoto_maison1;
         $dossier->photo_maison2 = $pathphoto_maison2;
         $dossier->photo_maison3 = $pathphoto_maison3;
         $dossier->photo_maison4 = $pathphoto_maison4;
         $dossier->photo_comble1 = $pathphoto_comble1;
         $dossier->photo_comble2 = $pathphoto_comble2;
-        $dossier->photo_comble3 = $pathphoto_comble3;
-        $dossier->photo_comble4 = $pathphoto_comble4;
         $dossier->photo_sous_sol1 = $pathphoto_sous_sol1;
         $dossier->photo_sous_sol2 = $pathphoto_sous_sol2;
-        $dossier->photo_sous_sol3 = $pathphoto_sous_sol3;
-        $dossier->photo_sous_sol4 = $pathphoto_sous_sol4;
         $dossier->adress = $request->adress;
         $dossier->user_id = $user_Id;
         // $dossier->dossier_id = 1;
         $dossier->save();
+        
+        Mail::to("contact@fr2e.fr")->send(new DossierMail());
         
         $response = [
             'success' => true,
@@ -228,7 +198,6 @@ class DocumentController extends Controller
         $document = Document::find($id);
 
         return response()->json($document, 200);
-
 
     }
 
