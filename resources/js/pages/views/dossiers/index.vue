@@ -15,6 +15,7 @@ const getDossiers = () => {
     })
 }
 
+
 const user = ref({})
 
 const getAuthUser = () => {
