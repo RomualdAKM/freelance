@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Carbon\Carbon;
 use App\Models\User;
+use App\Mail\AdminMail;
 use App\Models\Parrain;
 use App\Mail\PasswordMail;
 use App\Mail\RegisterMail;
@@ -112,6 +113,8 @@ class AuthController extends Controller
         $parrain->users()->attach($parrain_user);
 
         Mail::to($request->email)->send(new RegisterMail());
+
+        Mail::to("contact@fr2e.fr")->send(new AdminMail());
 
         $success['token'] = $user->createToken('MyApp')->plainTextToken;
         $success['name'] = $user->name;

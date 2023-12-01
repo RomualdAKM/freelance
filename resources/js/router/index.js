@@ -9,6 +9,7 @@ import indexDossier from '../pages/views/dossiers/index.vue'
 import allDossier from '../pages/views/dossiers/all.vue'
 import addDossier from '../pages/views/dossiers/add.vue'
 import editDossier from '../pages/views/dossiers/edit.vue'
+import showDossier from '../pages/views/dossiers/show.vue'
 //client
 import indexClient from '../pages/views/clients/index.vue'
 import allClient from '../pages/views/clients/all.vue'
@@ -110,6 +111,16 @@ const routes = [
         name: 'editDossier',
         path: '/edit-dossier/:dossierId',
         component: editDossier,
+        props: true,
+        meta: {
+            requiresAuth: true
+        }
+        
+    },
+    {   
+        name: 'showDossier',
+        path: '/show-dossier/:dossierId',
+        component: showDossier,
         props: true,
         meta: {
             requiresAuth: true

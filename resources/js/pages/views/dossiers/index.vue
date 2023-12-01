@@ -78,9 +78,12 @@ onMounted(() => {
                                        
                                        <th class="whitespace-no-wrap">NOM</th>
                                        <th class="text-center whitespace-no-wrap">PRENOM</th>
+                                       <th class="text-center whitespace-no-wrap">ADRESSE</th>
+                                       <th class="text-center whitespace-no-wrap">TELEPHONE</th>
+                                       <th class="text-center whitespace-no-wrap">EMAIL</th>
                                        <th class="text-center whitespace-no-wrap">MONTANT DEVIS</th>
                                        <th class="text-center whitespace-no-wrap">DATE FACTURATION</th>
-                                       <th class="text-center whitespace-no-wrap">SATUT</th>
+                                       <th class="text-center whitespace-no-wrap">STATUT</th>
                                        <th class="text-center whitespace-no-wrap" v-if="user.role == 'admin'">ACTIONS</th>
 
                                    </tr>
@@ -92,7 +95,10 @@ onMounted(() => {
                                            <a href="#" class="font-medium whitespace-no-wrap">{{ dossier.name }}</a> 
                                            
                                        </td>
+                                       <td class="text-center">{{ dossier.first_name }}</td>
                                        <td class="text-center">{{ dossier.adress }}</td>
+                                       <td class="text-center">{{ dossier.phone }}</td>
+                                       <td class="text-center">{{ dossier.email }}</td>
                                        <td class="text-center">{{ dossier.amount_quote }}</td>
                                        <td class="text-center">{{ dossier.date_bill }}</td>
                                        <td class="w-40">
@@ -104,10 +110,11 @@ onMounted(() => {
 
                                                <router-link :to="{name: 'editDossier',params:{dossierId:dossier.id}}" class="flex items-center mr-3"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Modifier </router-link>
 
+                                               <router-link :to="{name: 'showDossier',params:{dossierId:dossier.id}}" class="flex items-center mr-3"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Voir </router-link>
+                                               
                                                <button type="button" @click="deleteDossier(dossier.id)" class="flex items-center text-theme-6" href="javascript:;" data-toggle="modal" data-target="#delete-confirmation-modal"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Supprimer </button>
                                            </div>
                                            
-
                                        </td>
                                    </tr>
                                   
