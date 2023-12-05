@@ -24,11 +24,10 @@ const sendFacture = async (idFacture) => {
             console.log("ok");
             toast.fire({
                 icon: "success",
-                title: "Facture envoyer avec succé",
+                title: "Facture envoyer avec succés",
             });
         });
 };
-
 
 const telechagerFacture = async (id) => {
     await axios

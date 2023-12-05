@@ -107,12 +107,11 @@
         <div><span>TEL :</span> {{ $user->phone }}</div>
     </div>
     <div id="project" style="margin-top: 30px;">
-        <div>FRE2E COMPANY</div>
-        <div>EMAIL : XXXXXXXXX</div>
-        <div>ADRESSE : XXXXXXXXX</div>
-        <div>TELEPHONE : XXXXXXXXX</div>
-        <div>WHATSAPP : XXXXXXXXX</div>
-        
+        <div>FR2E COMPANY</div>
+        <div>EMAIL : contact@fr2e.fr</div>
+        <div>ADRESSE : 4 rue Maurice barres, 57000 Metz</div>
+        <div>SIRET : 978 494 417 00014</div>
+        <div>TVA : FR05978494417</div>
         
     </div>
 </header>
@@ -173,19 +172,19 @@
         </div>
         <div id="notices">
             <span>Nom du bénéficiaire:</span>
-            <span class="notice">xxxxxx</span>
+            <span class="notice">{{$facture->nom}}</span>
         </div>
         <div id="notices">
             <span>IBAN:</span>
-            <span class="notice">xxxxxx</span>
+            <span class="notice">{{$facture->iban}}</span>
         </div>
         <div id="notices">
             <span>BIC:</span>
-            <span class="notice">xxxxxx</span>
+            <span class="notice">{{$facture->bic}}</span>
         </div>
         <div id="notices">
             <span>Référence:</span>
-            <span class="notice">xxxxxx</span>
+            <span class="notice">{{$facture->reference}}</span>
         </div>
     </span>
 </footer>

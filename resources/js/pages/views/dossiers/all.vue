@@ -75,12 +75,13 @@ onMounted(() => {
                                    <tr>
                                        
                                        <th class="whitespace-no-wrap">NOM</th>
-                                       <th class="text-center whitespace-no-wrap">PRENOM</th>
+                                       <th class="text-center whitespace-no-wrap">PRENOMS</th>
                                        <th class="text-center whitespace-no-wrap">ADRESSE</th>
                                        <th class="text-center whitespace-no-wrap">TELEPHONE</th>
                                        <th class="text-center whitespace-no-wrap">EMAIL</th>
-                                       <th class="text-center whitespace-no-wrap">MONTANT DEVIS</th>
-                                       <th class="text-center whitespace-no-wrap">DATE FACTURATION</th>
+                                       <th class="text-center whitespace-no-wrap">MONTANT <br>DEVIS</th>
+                                       <th class="text-center whitespace-no-wrap">DATE <br>FACTURATION</th>
+                                       <th class="text-center whitespace-no-wrap">AGENT</th>
                                        <th class="text-center whitespace-no-wrap">STATUT</th>
                                        <th class="text-center whitespace-no-wrap" v-if="user.role == 'admin'">ACTIONS</th>
 
@@ -99,6 +100,7 @@ onMounted(() => {
                                        <td class="text-center">{{ dossier.email }}</td>
                                        <td class="text-center">{{ dossier.amount_quote }}</td>
                                        <td class="text-center">{{ dossier.date_bill }}</td>
+                                       <td class="text-center">{{ dossier.user.name }} {{ dossier.user.first_name }}</td>
                                        <td class="w-40">
                                            <div class="flex items-center justify-center text-theme-9"> <i data-feather="check-square" class="w-4 h-4 mr-2"></i> {{ dossier.status }} </div>
                                        </td>

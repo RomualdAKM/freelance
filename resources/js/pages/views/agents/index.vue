@@ -86,7 +86,7 @@ onMounted(() => {
                                <thead>
                                    <tr>
                                        <th class="whitespace-no-wrap">NOM</th>
-                                       <th class="text-center whitespace-no-wrap">PRENOM</th>
+                                       <th class="text-center whitespace-no-wrap">PRENOMS</th>
                                        <th class="text-center whitespace-no-wrap">EMAIL</th>
                                        <th class="text-center whitespace-no-wrap">TEL</th>
                                        <th class="text-center whitespace-no-wrap">CODE PARRAIN</th>

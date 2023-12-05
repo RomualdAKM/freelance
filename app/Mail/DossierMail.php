@@ -12,15 +12,18 @@ use Illuminate\Queue\SerializesModels;
 class DossierMail extends Mailable
 {
     use Queueable, SerializesModels;
+    public $name = '';
+    public $first_name = '';
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($name,$first_name)
     {
-        //
+        $this->name = $name;
+        $this->first_name = $first_name;
     }
 
     /**

@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Un nouveau dossier a été ajouté</h2>
+    <h2>Un nouveau dossier a été ajouté par : {{$name}}  {{$first_name}}</h2>
 </body>
 </html>

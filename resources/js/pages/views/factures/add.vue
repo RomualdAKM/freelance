@@ -13,16 +13,20 @@ const items = ref([
   }
 ]);
 
+const currentDate = new Date()
+
 const form = ref({
   
   total: 0,
   totalHT: 0, // Ajoutez une valeur initiale de 0
   totalTVA: 0,
-  date_emission: '', 
+  date_emission: currentDate.toISOString().split("T")[0], 
   date_echeance: '', 
-  user_id: '',
+  nom: '',
+  iban: '',
+  bic: '',
+  reference: '',
 });
-
 
 const users = ref({})
 
@@ -51,7 +55,7 @@ const saveFacture = async () => {
                 console.log('ok')
                 toast.fire({
                       icon: "success",
-                      title: "Facture enregistrer avec success",
+                      title: "Facture enregistré avec succés",
                   });
                  router.push("/factures")
               }else{
@@ -95,15 +99,46 @@ onMounted(() => {
      <div>
         <Header />
         <div class="content p-4" >
-            <div class="intro-y box lg:mt-5 p-4">
+            <div class="intro-y box lg:mt-5 p-4"> 
+                <h2 class="text-lg font-medium truncate mr-5 mb-5 text-center"> AJOUTER UNE FACTURE </h2>
                 <form >
                     <div>
+                      <div class="grid grid-cols-1 md:grid-cols-4 gap-2 mt-4 mb-12">                 
+                         
+                       <input
+                           type="text"
+                           class="input w-full border mt-2"
+                           v-model="form.nom"
+                           placeholder="nom du beneficiaire..."
+                           required
+                       />
+                       <input
+                           type="text"
+                           class="input w-full border mt-2"
+                           v-model="form.iban"
+                           placeholder="iban..."
+                           required
+                       />
+                       <input
+                           type="text"
+                           class="input w-full border mt-2"
+                           v-model="form.bic"
+                           placeholder="bic..."
+                           required
+                       />
+                       <input
+                           type="text"
+                           class="input w-full border mt-2"
+                           v-model="form.reference"
+                           placeholder="référence..."
+                       />
+               </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-2 mt-4 mb-12">                 
-                        <select  class="input border mt-2" v-model="form.user_id">
+                        <select  class="input border mt-2" v-model="form.user_id" required>
 
                             <option value="" selected>Choisir un agent</option>
 
-                            <option v-for="user in users" :key="user.id" :value="user.id">{{  user.name }}</option>
+                            <option v-for="user in users" :key="user.id" :value="user.id">{{  user.name }} {{  user.first_name }}</option>
                             
                         </select>
                        
@@ -113,12 +148,14 @@ onMounted(() => {
                             class="input w-full border mt-2"
                             v-model="form.date_emission"
                             placeholder="date émission..."
+                            disabled
                         />
                         <input
                             type="date"
                             class="input w-full border mt-2"
                             v-model="form.date_echeance"
                             placeholder="date échéance..."
+                            required
                         />
                     </div>
                     <button type="button" class="btn btn-red-900 bg-green-500 w-full py-3 text-white-500" @click="addItem()">+</button>
@@ -131,20 +168,23 @@ onMounted(() => {
                         class="input w-full border mt-2"
                         v-model="item.article"
                         placeholder="description..."
+                        required
                         />
                         <input
                         type="text"
                         class="input w-full border mt-2"
                         v-model="item.quantite"
                         placeholder="quantité..."
+                        required
                         />
                         <input
                         type="number"
                         class="input w-full border mt-2"
                         v-model="item.price"
                         placeholder="prix..."
+                        required
                         />
-                        <select  class="input border mt-2" v-model="item.numberTVA">
+                        <select  class="input border mt-2" v-model="item.numberTVA" required>
                             <option value="0">0</option>
                             <option value="18">18 </option>
                             <option value="20">20</option>
@@ -158,6 +198,7 @@ onMounted(() => {
                     <!-- <button type="button" class="button bg-theme-1 text-white mt-5" @click="saveDossier()">
                         Valider
                     </button> -->
+
                 </div>
                 </form>
                 <table class="table equal-space">
@@ -181,7 +222,9 @@ onMounted(() => {
                        </tr>
                       
                      </tbody>
-                   </table>
+                </table>
+
+               
                    <div class="flex justify-between">
                     <button class="btn btn-primary border-4 p-1 mt-2 bg-green-500 text-white text-xs flex gap-2 items-center"  @click.prevent="saveFacture()"
                      type="button" style="background-color: rgb(4, 141, 4);">

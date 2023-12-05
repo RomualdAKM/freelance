@@ -45,7 +45,12 @@ class BillController extends Controller
                 'totalTVA' => $form['totalTVA'],
                 'date_emission' => $form['date_emission'],
                 'date_echeance' => $form['date_echeance'],
+                'nom' => $form['nom'],
+                'iban' => $form['iban'],
+                'bic' => $form['bic'],
+                'reference' => $form['reference'],
                 'user_id' => $form['user_id'],
+
                 
             ]);
             $bill->save();

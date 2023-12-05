@@ -14,6 +14,10 @@ class Bill extends Model
 
     protected $fillable = [
         'total',
+        'nom',
+        'iban',
+        'bic',
+        'reference',
         'totalHT',
         'totalTVA',
         'date_emission',

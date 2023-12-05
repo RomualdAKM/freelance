@@ -43,15 +43,15 @@ import indexRemuneration from '../pages/views/remuneration/index.vue'
 import notFound from '../pages/notFound.vue'
 
 const routes = [
-    {   
-        name: 'index',
-        path: '/',
-        component: index,
-        meta: {
-            requiresAuth: true
-        }
+    // {   
+    //     name: 'index',
+    //     path: '/',
+    //     component: index,
+    //     meta: {
+    //         requiresAuth: true
+    //     }
         
-    },
+    // },
     {   
         name: 'register',
         path: '/register',
@@ -72,7 +72,7 @@ const routes = [
     },
     {   
         name: 'login',
-        path: '/login',
+        path: '/',
         component: login,
         meta: {
             requiresAuth: false
@@ -351,6 +351,5 @@ router.beforeEach((to,from) =>{
     //     return { name: 'indexDossier' }
     // }
 })
-
 
 export default router

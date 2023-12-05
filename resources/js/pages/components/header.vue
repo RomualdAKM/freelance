@@ -13,7 +13,7 @@ const getAuthUser = async () => {
 
 const logout = () => {
     localStorage.removeItem("token");
-    router.push("/login");
+    router.push("/");
 };
 
 const mobileMenuOpen = ref(false);
@@ -226,7 +226,7 @@ onMounted(async () => {
                         <div class="menu__title"> REMUNERATION </div>
                     </router-link>
                 </li>
-                <li >
+                <li v-if="user.role == 'admin'">
                     <router-link to="/agents" class="menu menu--active">
                         <div class="menu__icon"> <svg
                                 xmlns="http://www.w3.org/2000/svg"

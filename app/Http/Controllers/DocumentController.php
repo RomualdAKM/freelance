@@ -147,7 +147,7 @@ class DocumentController extends Controller
         // $dossier->dossier_id = 1;
         $dossier->save();
         
-        Mail::to("contact@fr2e.fr")->send(new DossierMail());
+        Mail::to("contact@fr2e.fr")->send(new DossierMail($user->name,$user->first_name));
         
         $response = [
             'success' => true,
@@ -167,10 +167,10 @@ class DocumentController extends Controller
 
         // $documents = Document::where('user_id', $user_Id)->get();
 
-        $query = Document::where('user_id', $user_Id);
+        $query = Document::where('user_id', $user_Id)->with('user');
 
         if ($request->has('search')) {
-            $query->where('name', 'like', '%' . $request->input('search') . '%');
+            $query->where('name', 'like', '%' . $request->input('search') . '%')->with('user');
         }
 
         $documents = $query->get();
@@ -183,9 +183,9 @@ class DocumentController extends Controller
 
 
         if ($request->has('search')) {
-            $documents = Document::where('name', 'like', '%' . $request->input('search') . '%')->get();
+            $documents = Document::where('name', 'like', '%' . $request->input('search') . '%')->with('user')->get();
         }else{
-            $documents = Document::all();
+            $documents = Document::with('user')->get();
         }
         
         // $documents = Document::all();

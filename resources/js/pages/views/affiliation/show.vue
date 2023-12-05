@@ -6,6 +6,7 @@ import { useRoute, useRouter } from 'vue-router'
 
 const route = useRoute()
 // const router = useRouter()
+const niveau = ref(2)
 
 const affilierId = ref(route.params.affilierId)
 
@@ -25,6 +26,7 @@ onMounted(() => {
 
 watch(route, async () => {
     affilierId.value = route.params.affilierId;
+    niveau.value++
     getAffiliers();
 });
 
@@ -64,7 +66,7 @@ watch(route, async () => {
                                        <th class="text-center whitespace-no-wrap">PRENOMS</th>
                                        <th class="text-center whitespace-no-wrap">EMAIL</th>
                                        <th class="text-center whitespace-no-wrap">TEL</th>
-                                       <th class="text-center whitespace-no-wrap">NIVEAU</th>
+                                       <th class="text-center whitespace-no-wrap" v-if="niveau <= 4">NIVEAU</th>
                                        <th class="text-center whitespace-no-wrap">AFFILLIERS</th>
 
                                    </tr>
@@ -79,7 +81,8 @@ watch(route, async () => {
                                        <td class="text-center">{{ affilier.first_name }}</td>
                                        <td class="text-center">{{ affilier.email }}</td>
                                        <td class="text-center">{{ affilier.phone }}</td>
-                                       <td class="text-center">Niveau 2</td>
+                                       <td class="text-center" v-if="niveau <= 4">Niveau {{ niveau }}</td>
+                                       
                                        <!-- <td class="w-40">
                                            <div class="flex items-center justify-center text-theme-9"> <i data-feather="check-square" class="w-4 h-4 mr-2"></i> {{ dossier.status }} </div>
                                        </td> -->
@@ -102,7 +105,7 @@ watch(route, async () => {
                        <!-- END: Data List -->
                        <!-- BEGIN: Pagination -->
                        <div class="intro-y col-span-12 flex flex-wrap sm:flex-row sm:flex-no-wrap items-center">
-                           <ul class="pagination">
+                           <!-- <ul class="pagination">
                                <li>
                                    <a class="pagination__link" href="#"> <i class="w-4 h-4" data-feather="chevrons-left"></i> </a>
                                </li>
@@ -120,7 +123,7 @@ watch(route, async () => {
                                <li>
                                    <a class="pagination__link" href="#"> <i class="w-4 h-4" data-feather="chevrons-right"></i> </a>
                                </li>
-                           </ul>
+                           </ul> -->
                            <!-- <select class="w-20 input box mt-3 sm:mt-0">
                                <option>10</option>
                                <option>25</option>
